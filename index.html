@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <!-- ===== معلومات الموقع الأساسية (SEO) ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مطعم الشعلة | أطيب الأطباق الشرقية - أكل شهي بلمسة عربية</title>
+  <meta name="description" content="مطعم الشعلة: مكونات طازجة، مشاوي شواية، وأطباق شرقية أصيلة. اطلب الأطباق عبر واتساب بضغطة واحدة وتوصيل سريع لجميع المدن.">
+  <meta name="keywords" content="مطعم الشعلة, مطعم برغر, بيتزا, مشاوي, وجبات شرقية, أكل شهي">
+  <meta name="author" content="مطعم الشعلة">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#e8590c">
+
+  <!-- Open Graph للمشاركة -->
+  <meta property="og:title" content="مطعم الشعلة | أطيب الأطباق الشرقية">
+  <meta property="og:description" content="مكونات طازجة، توصيل سريع، جودة عالية. اطلب الآن عبر واتساب.">
+  <meta property="og:type" content="restaurant.restaurant">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- خطوط عربية عصرية: Cairo + Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- ===== ملف التنسيقات الرئيسي ===== -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- ======================= الشريط العلوي الثابت ======================= -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar container">
+      <a href="#home" class="logo" aria-label="مطعم الشعلة - الصفحة الرئيسية">
+        <span class="logo-icon" aria-hidden="true">🔥</span>
+        <span class="logo-text">مطعم <span class="logo-accent">الشعلة</span></span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">الرئيسية</a></li>
+        <li><a href="#menu" class="nav-link">المنيو</a></li>
+        <li><a href="#offers" class="nav-link">العروض</a></li>
+        <li><a href="#about" class="nav-link">لماذا نحن</a></li>
+        <li><a href="#reviews" class="nav-link">آراء العملاء</a></li>
+        <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+      </ul>
+
+      <a href="https://wa.me/967509730421" target="_blank" rel="noopener" class="btn btn-whatsapp nav-cta">
+        <img src="assets/icons/whatsapp.svg" alt="واتساب" width="20" height="20" aria-hidden="true">
+        <span class="nav-cta-text">اطلب الآن</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ======================= الصفحة الرئيسية (Hero) ======================= -->
+  <section class="hero" id="home">
+    <div class="hero-blob" aria-hidden="true"></div>
+    <div class="hero-blob" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge reveal">🔥 مطعم أطيب الأطباق الشرقية</span>
+        <h1 class="hero-title reveal">مطعم <span class="hero-title-accent">الشعلة</span></h1>
+        <p class="hero-greeting reveal">مرحباً بك! 😋 أكل شهي بلمسة عربية</p>
+        <p class="hero-text reveal">
+          نقدّم لك تشكيلة متنوعة من الأطباق الشرقية والبرغر والمشاوي،
+          بجودة عالية ومكونات طازجة نضيفة يومياً.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a href="#menu" class="btn btn-primary btn-lg">🍽️ عرض المنيو</a>
+          <a href="https://wa.me/967509730421" target="_blank" rel="noopener" class="btn btn-outline btn-lg">📲 اطلب الآن</a>
+        </div>
+
+        <div class="hero-rating reveal">
+          <span class="hero-stars" aria-label="تقييم 5 من 5">★★★★★</span>
+          <span>تقييم 4.9 / 5 · +1200 عميل يحبوننا</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="hero-plate">
+          <span class="hero-emoji">🍔🍕</span>
+        </div>
+        <div class="hero-card hero-card-1">🥘 وجبة مشوية</div>
+        <div class="hero-card hero-card-2">🥗 سلطة طازجة</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= قسم المنيو ======================= -->
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge" aria-hidden="true">🍽️</span>
+        <h2 class="section-title">المنيو</h2>
+        <p class="section-subtitle">مكونات طازجة يومياً · أطباق شهية بأسعار مناسبة</p>
+      </div>
+
+      <!-- البحث -->
+      <div class="menu-controls reveal">
+        <div class="search-box">
+          <img src="assets/icons/search.svg" alt="بحث" width="22" height="22" aria-hidden="true">
+          <input type="search" id="menuSearch" placeholder="ابحث عن طبقك المفضل... مثال: برجر، بيتزا، مشاوي" aria-label="البحث في المنيو">
+        </div>
+
+        <!-- أزرار التصنيفات -->
+        <div class="categories" role="group" aria-label="تصفية المنيو حسب الفئة">
+          <button class="category-btn active" data-category="all">✨ الكل</button>
+          <button class="category-btn" data-category="burger">🍔 البرغر</button>
+          <button class="category-btn" data-category="pizza">🍕 البيتزا</button>
+          <button class="category-btn" data-category="main">🍗 الوجبات</button>
+          <button class="category-btn" data-category="drinks">🥤 المشروبات</button>
+          <button class="category-btn" data-category="appetizer">🍟 المقبلات</button>
+          <button class="category-btn" data-category="dessert">🍰 الحلويات</button>
+        </div>
+      </div>
+
+      <!-- بطاقات المنيو -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- برجر -->
+        <article class="menu-card reveal" data-category="burger" data-name="برجر التحطيم" data-price="25" data-desc="لحم مشوي طازج مع صلصة الجبن الحارة والبصل المكرمل">
+          <div class="card-image">
+            <span class="card-emoji" aria-hidden="true">🍔</span>
+            <span class="card-category">برغر</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">برجر التحطيم</h3>
+            <p class="card-desc">لحم مشوي طازج مع صلصة الجبن الحارة والبصل المكرمل</p>
+            <div class="card-footer">
+              <span class="card-price">25<small> ر.س</small></span>
+              <button class="btn btn-whatsapp btn-sm btn-wa" data-name="برجر التحطيم" data-price="25">اطلب عبر واتساب</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-category="burger" data-name="برجر الكفتة" data-price="28" data-desc="كفتة مشوية مع خضار طازجة ورشة خاصة">
+          <div class="card-image">
+            <span class="card-emoji" aria-hidden="true">🍔</span>
+            <span class="card-category">برغر</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">برجر الكفتة</h3>
+            <p class="card-desc">كفتة مشوية مع خضار طازجة ورشة خاصة</p>
+            <div class="card-footer">
+              <span class="card-price">28<small> ر.س</small></span>
+              <button class="btn btn-whatsapp btn-sm btn-wa" data-name="برجر الكفتة" data-price="28">اطلب عبر واتساب</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- بيتزا -->
+        <article class="menu-card reveal" data-category="pizza" data-name="بيتزا الجبن الطازج" data-price="35" data-desc="عجينة محررة مع جبن موزاريلا طازج والطماطم">
+          <div class="card-image">
+            <span class="card-emoji" aria-hidden="true">🍕</span>
+            <span class="card-category">بيتزا</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">بيتزا الجبن الطازج</h3>
+            <p class="card-desc">عجينة محررة مع جبن موزاريلا طازج والطماطم</p>
+            <div class="card-footer">
+              <span class="card-price">35<small> ر.س</small></span>
+              <button class="btn btn-whatsapp btn-sm btn-wa" data-name="بيتزا الجبن الطازج" data-price="35">اطلب عبر واتساب</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-category="pizza" data-name="بيتزا المشاوي" data-price="40" data-desc="بيتزا خاصة بالمشاوي المشوية الحارة">
+          <div class="card-image">
+            <span class="card-emoji" aria-hidden="true">🍕</span>
+            <span class="card-category">بيتزا</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">بيتزا المشاوي</h3>
+            <p class="card-desc">بيتزا خاصة بالمشاوي المشوية الحارة</p>
+            <div class="card-footer">
+              <span class="card-price">40<small> ر.س</small></span>
+              <button class="btn btn-whatsapp btn-sm btn-wa" data-name="بيتزا المشاوي" data-price="40">اطلب عبر واتساب</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- وجبات -->
+        <article class="menu-card reveal" data-category="main" data-name="وجبة اللحمة المشوية" data-price="65" data-desc="مشوي + أرز أبيض + بطاطس مشوية + سلطة خضراء">
+          <div class="card-image">
+            <span class="card-emoji" aria-hidden="true">🍗</span>
+            <span class="card-category">وجبات</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">وجبة اللحمة المشوية</h3>
+            <p class="card-desc">مشوي + أرز أبيض + بطاطس مشوية + سلطة خضراء</p>
+            <div class="card-footer">
+              <span class="card-price">65<small> ر.س</small></span>
+              <button class="btn btn-whatsapp btn-sm btn-wa" data-name="وجبة اللحمة المشوية" data-price="65">اطلب عبر واتساب</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-category="main" data-name="وجبة الشاورما" data-price="55" data-desc="لحمة شاورما + أرز بسمتي + سلطة">
+          <div class="card-image">
+            <span class="card-emoji" aria-hidden="true">🍗</span>
+            <span class="card-category">وجبات</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">وجبة الشاورما</h3>
+            <p class="card-desc">لحمة شاورما + أرز بسمتي + سلطة</p>
+            <div class="card-footer">
+              <span class="card-price">55<small> ر.س</small></span>
+              <button class="btn btn-whatsapp btn-sm btn-wa" data-name="وجبة الشاورما" data-price="55">اطلب عبر واتساب</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- مشروبات -->
+        <article class="menu-card reveal" data-category="drinks" data-name="عصير البرتقالي الطازج" data-price="12" data-desc="عصير برتقالي طازج مضروب من الحقول">
+          <div class="card-image">
+            <span class="card-emoji" aria-hidden="true">🥤</span>
+            <span class="card-category">مشروبات</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">عصير البرتقالي الطازج</h3>
+            <p class="card-desc">عصير برتقالي طازج مضروب من الحقول</p>
+            <div class="card-footer">
+              <span class="card-price">12<small> ر.س</small></span>
+              <button class="btn btn-whatsapp btn-sm btn-wa" data-name="عصير البرتقالي الطازج" data-price="12">اطلب عبر واتساب</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-category="drinks" data-name="مشروب القهوة الإسبريسو" data-price="10" data-desc="إسبريسو محلي مختص مع كراميل">
+          <div class="card-image">
+            <span class="card-emoji" aria-hidden="true">☕</span>
+            <span class="card-category">مشروبات</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">مشروب القهوة الإسبريسو</h3>
+            <p class="card-desc">إسبريسو محلي مختص مع كراميل</p>
+            <div class="card-footer">
+              <span class="card-price">10<small> ر.س</small></span>
+              <button class="btn btn-whatsapp btn-sm btn-wa" data-name="مشروب القهوة الإسبريسو" data-price="10">اطلب عبر واتساب</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- مقبلات -->
+        <article class="menu-card reveal" data-category="appetizer" data-name="البطاطس المقلي" data-price="15" data-desc="بطاطس مقلية مع صلصة الثوم والكبسة">
+          <div class="card-image">
+            <span class="card-emoji" aria-hidden="true">🍟</span>
+            <span class="card-category">مقبلات</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">البطاطس المقلي</h3>
+            <p class="card-desc">بطاطس مقلية مع صلصة الثوم والكبسة</p>
+            <div class="card-footer">
+              <span class="card-price">15<small> ر.س</small></span>
+              <button class="btn btn-whatsapp btn-sm btn-wa" data-name="البطاطس المقلي" data-price="15">اطلب عبر واتساب</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-category="appetizer" data-name="الفول المدم" data-price="18" data-desc="فول مدم مع بصل وطماطم وخبز بلدي">
+          <div class="card-image">
+            <span class="card-emoji" aria-hidden="true">🫓</span>
+            <span class="card-category">مقبلات</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">الفول المدم</h3>
+            <p class="card-desc">فول مدم مع بصل وطماطم وخبز بلدي</p>
+            <div class="card-footer">
+              <span class="card-price">18<small> ر.س</small></span>
+              <button class="btn btn-whatsapp btn-sm btn-wa" data-name="الفول المدم" data-price="18">اطلب عبر واتساب</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- حلويات -->
+        <article class="menu-card reveal" data-category="dessert" data-name="الكنافة النابلسية" data-price="18" data-desc="كنافة نابلسية بالجبن والهيل والعسل">
+          <div class="card-image">
+            <span class="card-emoji" aria-hidden="true">🍰</span>
+            <span class="card-category">حلويات</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">الكنافة النابلسية</h3>
+            <p class="card-desc">كنافة نابلسية بالجبن والهيل والعسل</p>
+            <div class="card-footer">
+              <span class="card-price">18<small> ر.س</small></span>
+              <button class="btn btn-whatsapp btn-sm btn-wa" data-name="الكنافة النابلسية" data-price="18">اطلب عبر واتساب</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-category="dessert" data-name="الحلوى التركية" data-price="20" data-desc="حلوى الشوكولاتة التركية بالفستق الحلبي">
+          <div class="card-image">
+            <span class="card-emoji" aria-hidden="true">🍫</span>
+            <span class="card-category">حلويات</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">الحلوى التركية</h3>
+            <p class="card-desc">حلوى الشوكولاتة التركية بالفستق الحلبي</p>
+            <div class="card-footer">
+              <span class="card-price">20<small> ر.س</small></span>
+              <button class="btn btn-whatsapp btn-sm btn-wa" data-name="الحلوى التركية" data-price="20">اطلب عبر واتساب</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- رسالة عندما لا توجد نتائج -->
+        <p class="empty-state" id="emptyState">😕 لا توجد نتائج مطابقة لبحثك. جرّب كلمات أخرى.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= قسم العروض ======================= -->
+  <section class="section section-alt" id="offers">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge" aria-hidden="true">🏷️</span>
+        <h2 class="section-title">العروض والخصومات</h2>
+        <p class="section-subtitle">استمتع بأشياء أطيب مع خصوماتنا الحصرية — واطلبها الآن عبر واتساب</p>
+      </div>
+
+      <div class="offers-grid">
+        <article class="offer-card reveal">
+          <span class="offer-badge">-20%</span>
+          <div class="offer-emoji" aria-hidden="true">🍕</div>
+          <h3 class="offer-title">خصم البيتزا</h3>
+          <p class="offer-desc">خصم 20% على جميع أنواع البيتزا 🍕</p>
+          <p class="offer-price">بسعر 28 ر.س بدلاً من 35 ر.س</p>
+          <div class="offer-actions">
+            <button class="btn btn-wa btn-primary" data-offer="خصم البيتزا: خصم 20% على جميع أنواع البيتزا">اطلب الخصم عبر واتساب</button>
+          </div>
+        </article>
+
+        <article class="offer-card reveal">
+          <span class="offer-badge">-30%</span>
+          <div class="offer-emoji" aria-hidden="true">🍗</div>
+          <h3 class="offer-title">وجبة العائلة</h3>
+          <p class="offer-desc">وجبة عائلية تحتوي على شاورمة + برجر + مشروب</p>
+          <p class="offer-price">بسعر 180 ر.س بدلاً من 260 ر.س</p>
+          <div class="offer-actions">
+            <button class="btn btn-wa btn-primary" data-offer="وجبة العائلة: شاورمة + برجر + مشروب بسعر 180 ر.س">اطلب العرض عبر واتساب</button>
+          </div>
+        </article>
+
+        <article class="offer-card reveal">
+          <span class="offer-badge">-15%</span>
+          <div class="offer-emoji" aria-hidden="true">🥤</div>
+          <h3 class="offer-title">خصم المشروبات</h3>
+          <p class="offer-desc">خصم 15% على جميع المشروبات والعصائر الطازجة</p>
+          <p class="offer-price">خصم مباشر على جميع المشروبات</p>
+          <div class="offer-actions">
+            <button class="btn btn-wa btn-primary" data-offer="خصم المشروبات: خصم 15% على جميع المشروبات والعصائر الطازجة">اطلب الخصم عبر واتساب</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= لماذا نحن؟ ======================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge" aria-hidden="true">❤️</span>
+        <h2 class="section-title">لماذا نحن؟</h2>
+        <p class="section-subtitle">مميزات تجعل مطعم الشعلة وجهتك الأولى لأكلات الشعبي</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-icon" aria-hidden="true">🥬</div>
+          <h3>مكونات طازجة</h3>
+          <p>نختار المكونات من أفضل المصانع والخضار الطازجة نضيف يومياً</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon" aria-hidden="true">🛵</div>
+          <h3>توصيل سريع</h3>
+          <p>توصيل سريع لجميع مناطق المدينة خلال ساعات قليلة</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon" aria-hidden="true">⭐</div>
+          <h3>جودة عالية</h3>
+          <p>نضيف لك أطباقاً بجودة تشكيلتها العالمية</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon" aria-hidden="true">💰</div>
+          <h3>أسعار مناسبة</h3>
+          <p>أسعار تنافسية تضمن لك أكل شهي بلا أي إسراف</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= آراء العملاء ======================= -->
+  <section class="section section-alt" id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge" aria-hidden="true">💬</span>
+        <h2 class="section-title">آراء العملاء</h2>
+        <p class="section-subtitle">نحن نستمتع بثقة عملائنا ونسعى دائماً لخدمتهم</p>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card reveal">
+          <div class="review-stars" aria-label="تقييم 5 من 5">★★★★★</div>
+          <p class="review-text">"أكل كان لذيذاً جداً والجودة ممتازة. التوصيل كان سريعاً والطعام مطابق تماماً للوصف. سأعود بالتأكيد!"</p>
+          <div class="review-author">
+            <span class="review-avatar" aria-hidden="true">س</span>
+            <span>سارة الأحمد</span>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-stars" aria-label="تقييم 5 من 5">★★★★★</div>
+          <p class="review-text">"تجربة رائعة من مطعم الشعلة! الأسعار معقولة والجودة عالية، والأكلات الشعبي بذيذ."</p>
+          <div class="review-author">
+            <span class="review-avatar" aria-hidden="true">م</span>
+            <span>محمد الخالد</span>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-stars" aria-label="تقييم 5 من 5">★★★★★</div>
+          <p class="review-text">"بيتي يحب أكل البيتزا والمشاوي من مطعم الشعلة. الموظفون ودودون والخدمة ممتازة."</p>
+          <div class="review-author">
+            <span class="review-avatar" aria-hidden="true">ع</span>
+            <span>عائلة عبدالله</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= تواصل معنا ======================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge" aria-hidden="true">📞</span>
+        <h2 class="section-title">تواصل معنا</h2>
+        <p class="section-subtitle">يسعدنا سماعك، ونتمنى زيارتك قريباً!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <div class="contact-icon" aria-hidden="true">📞</div>
+          <h3>واتساب</h3>
+          <p>0509730421</p>
+          <div class="contact-cta-inline">
+            <a href="https://wa.me/967509730421" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">مراسلتنا عبر واتساب</a>
+          </div>
+        </div>
+
+        <div class="contact-card reveal">
+          <div class="contact-icon" aria-hidden="true">🕐</div>
+          <h3>ساعات العمل</h3>
+          <p>السبت - الخميس: 12:00 صباحاً - 23:00 مساءً<br>الأحد: مغلق</p>
+        </div>
+
+        <div class="contact-card reveal">
+          <div class="contact-icon" aria-hidden="true">📍</div>
+          <h3>العنوان</h3>
+          <p>حي النخيل - شارع الملك فهد<br>الرياض - المملكة العربية السعودية</p>
+        </div>
+      </div>
+
+      <div class="socials reveal">
+        <a href="#" class="social-btn" aria-label="إنستغرام"><img src="assets/icons/instagram.svg" alt="إنستغرام" width="22" height="22"></a>
+        <a href="#" class="social-btn" aria-label="فيسبوك"><img src="assets/icons/facebook.svg" alt="فيسبوك" width="22" height="22"></a>
+        <a href="#" class="social-btn" aria-label="تيك توك"><img src="assets/icons/tiktok.svg" alt="تيك توك" width="22" height="22"></a>
+      </div>
+
+      <div class="contact-cta reveal">
+        <a href="https://wa.me/967509730421" target="_blank" rel="noopener" class="btn btn-primary btn-lg">📲 اطلب من مطعم الشعلة الآن</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= تذييل الصفحة ======================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>🔥 مطعم الشعلة</h4>
+        <p>مطعم أطيب الأطباق الشرقية، نقدم لك أطباقاً شهية بجودة عالية ومكونات طازجة، مع توصيل سريع لأهل المدينة.</p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul class="footer-links">
+          <li><a href="#home">الصفحة الرئيسية</a></li>
+          <li><a href="#menu">المنيو</a></li>
+          <li><a href="#offers">العروض</a></li>
+          <li><a href="#about">لماذا نحن</a></li>
+          <li><a href="#reviews">آراء العملاء</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>تواصل معنا</h4>
+        <ul class="footer-contact">
+          <li><img src="assets/icons/whatsapp.svg" alt="واتساب" width="18" height="18" aria-hidden="true"> <a href="https://wa.me/967509730421" target="_blank" rel="noopener">0509730421</a></li>
+          <li><img src="assets/icons/phone.svg" alt="هاتف" width="18" height="18" aria-hidden="true"> <a href="tel:+967509730421">0509730421</a></li>
+          <li><img src="assets/icons/clock.svg" alt="ساعة" width="18" height="18" aria-hidden="true"> السبت - الخميس: 12:00 - 23:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year">2026</span> مطعم الشعلة. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================= زر العودة للأعلى ======================= -->
+  <button class="back-to-top" id="backToTop" aria-label="العودة إلى الأعلى">↑</button>
+
+  <!-- ===== ملف جافا سكريبت الرئيسي ===== -->
+  <script src="script.js"></script>
+</body>
+</html>

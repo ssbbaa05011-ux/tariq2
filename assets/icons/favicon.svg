@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <!-- ===== Meta Tags ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مطعم الشعلة | أطيب الأطباق الشرقية - أكل شهي بلمسة عربية</title>
+  <meta name="description" content="مطعم الشعلة - أطيب الأطباق الشرقية والبرغر والمشاوي المقدمة بأجود المكونات الطازجة. اطلب الآن عبر واتساب واستمتع بتجربة أكل شهية.">
+  <meta name="keywords" content="مطعم, برغر, بيتزا, مشاوي, وجبات, حلويات, أكل شهي, شرقية">
+  <meta name="author" content="مطعم الشعلة">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#e8590c">
+
+  <!-- ===== Open Graph (للمشاركة على السوشيال ميديا) ===== -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="مطعم الشعلة | أطيب الأطباق الشرقية">
+  <meta property="og:description" content="مكونات طازجة، توصيل سريع، جودة عالية. اطلب الآن عبر واتساب.">
+  <meta property="og:locale" content="ar_SA">
+
+  <!-- ===== Favicon ===== -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- ===== Fonts: Cairo + Tajawal (خطوط عربية عصرية) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- ===== Styles ===== -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- ======================= الشريط العلوي الثابت ======================= -->
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <!-- الشعار -->
+      <a href="#home" class="logo" aria-label="الصفحة الرئيسية">
+        <span class="logo-flame">🔥</span>
+        <span class="logo-text">مطعم <span>الشعلة</span></span>
+      </a>
+
+      <!-- روابط التنقل -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+        <li><a href="#menu" class="nav-link">المنيو</a></li>
+        <li><a href="#offers" class="nav-link">العروض</a></li>
+        <li><a href="#about" class="nav-link">لماذا نحن</a></li>
+        <li><a href="#reviews" class="nav-link">آراء العملاء</a></li>
+        <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+      </ul>
+
+      <!-- زر طلب عبر واتساب -->
+      <a href="https://wa.me/967509730421" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm nav-order-btn">
+        <svg ...> <!-- whatsapp icon --> </svg>
+        اطلب الآن
+      </a>
+
+      <!-- زر القائمة للموبايل -->
+      <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-badge">🔥 مطعم أطيب الأطباق في مدينتنا</span>
+        <h1 class="hero-title">مطعم <span>الشعلة</span></h1>
+        <p class="hero-greeting">مرحباً بك! أكل شهي بلمسة عربية 🔥</p>
+        <p class="hero-description">
+          نقدم لك تشكيلة متنوعة من الأطباق الشرقية والبرغر والمشاوي
+          بجودة عالية ومكونات طازجة نضيفة يومياً.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary btn-lg">عرض المنيو</a>
+          <a href="https://wa.me/967509730421?text=السلام%20عليكم%2C%20أود%20طلب%20من%20مطعم%20الشعلة" target="_blank" rel="noopener" class="btn btn-outline btn-lg">اطلب الآن</a>
+        </div>
+        <!-- تقييم سريع -->
+        <div class="hero-rating">
+          <span class="stars">★★★★★</span>
+          <span>تقييم 4.9 من 5 - أكثر من 1200 عميل سعيد</span>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="hero-plate">
+          <span class="hero-emoji">🍔🍕🍗</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  ...
+```
+
+Wait — a big HTML file with emoji icons inline. For the nav whatsapp icon, I said I'd use assets. Let me use <img> tags for icons from assets/icons. But writing many SVG files via write tool is fine — I can write SVG content directly.
+
+Let me create the SVG assets first (mentally), then HTML referencing them.
+
+assets/icons/favicon.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <text y=".9em" font-size="90">🔥</text>
+</svg>
+```
+
+Actually favicon as emoji text is fine.
+
+assets/icons/whatsapp.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+```
+
+assets/icons/phone.svg, clock.svg, location.svg similar simple SVGs.
+
+assets/icons/instagram.svg, facebook.svg, tiktok.svg.
+
+These I'll write via write tool.
+
+Now the big HTML. Let me carefully compose.
+
+Menu items data (6 categories, but cards):
+
+برغر:
+1. 🍔 برجر تشويه مشوي — "برجر لحم مشوي مع صلصة الجبن الحارة والبصل المكرمل" — 25 ر.س — category: burger
+2. 🍔 برجر دجاج فلفل — "برجر دجاج مشوي مع خضار طازجة" — 22 ر.س
+
+بيتزا:
+3. 🍕 بيتزا جبن طازة — "عجينة محررة + جبن موزاريلا الطازج + طماطم" — 35 ر.س
+4. 🍕 بيتزا مشاوي — "بيتزا خاصة بالمشاوي المشوية" — 40 ر.س
+
+وجبات:
+5. 🍗 وجبة كاملة مشوية — "مشوي + أرز أبيض + بطاطس + سلطة" — 60 ر.س
+6. 🍗 وجبة شاورما — "شاورما لحم + أرز بسمتي + سلطة" — 55 ر.س
+
+مشروبات:
+7. 🥤 عصير برتقالي طازج — "عصير برتقالي طازج من الحقول" — 12 ر.س
+8. 🥤 مشروب كنافة — "آيس كريم كنافة بالقهوة" — 15 ر.س
+
+مقبلات:
+9. 🍟 بطاطس مقلية — "بطاطس مقلية مقلية مع صلصة الثوم" — 15 ر.س
+10. 🍟 فول مدم — "فول مدم مع بصل وطماطم" — 18 ر.س
+
+حلويات:
+11. 🍰 كنافة نابلسية — "كنافة نابلسية بالجبن والهيل" — 18 ر.س
+12. 🍰 حلوى التركي — "حلوى الشوكولاتة التركية" — 20 ر.س
+
+Hmm, maybe simpler: keep items with emojis per category.
+
+Let me finalize menu items list (12 items):
+
+Burger:
+- 🍔 برجر التحطيم | لحم مشوي + صلصة الجبن الحارة | 25 ر.س
+- 🍔 برجر الكفتة | كفتة مشوية + خضار | 28 ر.س
+
+Pizza:
+- 🍕 بيتزا الجبن الطازج | عجينة محررة + جبن موزاريلا | 35 ر.س
+- 🍕 بيتزا المشاوي | بيتزا خاصة بالمشاوي | 40 ر.س
+
+Mains:
+- 🍗 وجبة اللحمة المشوية | مشوي + أرز + بطاطس + سلطة | 65 ر.س
+- 🍗 وجبة الشاورما | لحمة شاورما + بسمتي + سلطة | 55 ر.س
+
+Drinks:
+- 🥤 عصير البرتقالي | طازج من الحقول | 12 ر.س
+- 🥤 مشروب القهوة | إسبريسو محلي | 10 ر.س
+
+Appetizers:
+- 🍟 البطاطس المقلي | مع صلصة الثوم | 15 ر.س
+- 🍟 الفول المدم | مع بصل وطماطم | 18 ر.س
+
+Desserts:
+- 🍰 الكنافة النابلسية | بالجبن والهيل | 18 ر.س
+- 🍰 الحلوى التركية | الشوكولاتة والفستق | 20 ر.س
+
+Categories list: كل, برجر, بيتزا, وجبات, مشروبات, مقبلات, حلويات.
+
+Category keys: all, burger, pizza, main, drinks, appetizer, dessert.
+
+Card structure:
+
+```html
+<article class="menu-card reveal" data-category="burger">
+  <div class="card-image">
+    <span class="card-emoji">🍔</span>
+    <span class="card-category">برغر</span>
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">برجر التحطيم</h3>
+    <p class="card-desc">لحم مشوي طازج مع صلصة الجبن الحارة والبصل المكرمل</p>
+    <div class="card-footer">
+      <span class="card-price">25 <small>ر.س</small></span>
+      <button class="btn btn-whatsapp btn-sm" data-name="برجر التحطيم" data-price="25">اطلب عبر واتساب</button>
+    </div>
+  </div>
+</article>
+```
+
+WhatsApp button with inline SVG icon? Buttons with text "اطلب عبر واتساب" — requirement includes زر "اطلب عبر واتساب". Fine.
+
+Offers section: 
+- عرض البيتزا: خصم 20% على جميع البيتزا — "خصم فوري على جميع أنواع البيتزا 🍕"
+- وجبة جاموسة... skip. 
+- عرض العائلة: وجبة 4 أشخاص بسعر 180 ر.س بدلاً من 240.
+- خصم المشروبات: 15% على المشروبات.
+
+Each offer card: emoji, title, description, discount badge, CTA button (wa.me with text).
+
+Why us: 4 items: مكونات طازجة 🥬, توصيل سريع 🛵, جودة عالية ⭐, أسعار مناسبة 💰. With descriptions.
+
+Reviews: 3 cards: names like "أحمد + عائلة", "سارة", "محمد". Stars via SVG or ★ characters. Use ★.
+
+Contact: phone card with tel link, hours card, address card; social icons (instagram, facebook, tiktok, twitter) as links to "#" with aria-labels. WhatsApp big CTA.
+
+Footer: 3 columns: about, quick links, contact; bottom bar copyright with current year via JS.
+
+Now writing all this carefully. Length is fine.
+
+CSS plan (style.css):
+
+```css
+/* ===== Variables ===== */
+:root {
+  --primary: #e8590c;
+  --primary-dark: #d9480f;
+  --accent: #f59f00;
+  --bg: #fff8f0;
+  --surface: #ffffff;
+  --dark: #2b1b12;
+  --text: #54382a;
+  --muted: #8a7364;
+  --border: #f3e2d3;
+  --shadow: 0 10px 30px rgba(232, 89, 12, .12);
+  --radius: 16px;
+  --font-heading: 'Cairo', sans-serif;
+  --font-body: 'Tajawal', sans-serif;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height:1.8; overflow-x: hidden; }
+img { max-width:100%; }
+h1,h2,h3,h4 { font-family: var(--font-heading); color: var(--dark); line-height: 1.3; }
+
+.container { width: min(1140px, 92%); margin-inline: auto; }
+
+/* Buttons */
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; font-family:var(--font-heading); font-weight:700; border:none; cursor:pointer; text-decoration:none; border-radius: 50px; transition: all .3s ease; }
+.btn-primary { background: linear-gradient(135deg, var(--primary), var(--accent)); color:#fff; padding: .9rem 2rem; box-shadow: 0 8px 20px rgba(232,89,12,.35); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(232,89,12,.45); }
+.btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); padding:.9rem 2rem; }
+.btn-outline:hover { background: var(--primary); color:#fff; transform: translateY(-3px); }
+.btn-whatsapp { background: #25d366; color:#fff; padding:.6rem 1.2rem; }
+.btn-whatsapp:hover { background:#1ebe5b; transform: translateY(-2px); }
+.btn-lg { padding: 1rem 2.2rem; font-size: 1.1rem; }
+.btn-sm { padding: .5rem 1rem; font-size: .9rem; }
+
+/* Header */
+.header { position: fixed; top:0; inset-inline:0; z-index: 1000; background: rgba(255,255,255,.85); backdrop-filter: blur(12px); ... transition }
+.header.scrolled { box-shadow ... }
+
+.navbar { display:flex; align-items:center; justify-content:space-between; padding: .9rem 0; }
+
+.logo { display:flex; align-items:center; gap:.5rem; text-decoration:none; font-family:var(--font-heading); font-weight:800; font-size:1.4rem; color: var(--dark); }
+.logo-flame { font-size:1.8rem; }
+.logo-text span { color: var(--primary); }
+
+.nav-links { display:flex; gap:.5rem; list-style:none; }
+.nav-link { text-decoration:none; color: var(--text); font-weight:700; padding:.5rem 1rem; border-radius:50px; transition:.3s; font-size:.95rem; }
+.nav-link:hover { color: var(--primary); background: #fff1e6; }
+.nav-link.active { color:#fff; background: linear-gradient(...); }
+
+.nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px; }
+.nav-toggle span { width:26px; height:3px; background: var(--dark); border-radius:3px; transition:.3s; }
+
+/* Hero */
+.hero { min-height: 100vh; display:flex; align-items:center; position:relative; background: linear-gradient(135deg, #fff3e6, #ffe8d6 40%, #ffd6b8); overflow:hidden; padding: 140px 0 80px; }
+.hero-overlay pattern via radial-gradients.
+.hero-content { display:grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items:center; }
+.hero-badge { display:inline-block; background:#fff; padding:.4rem 1rem; border-radius:50px; box-shadow; font-weight:700; color: var(--primary-dark); margin-bottom:1rem; }
+.hero-title { font-size: clamp(3rem, 8vw, 5.5rem); font-weight:900; }
+.hero-title span { color: var(--primary); position:relative; }
+.hero-greeting { font-family:var(--font-heading); font-size: clamp(1.3rem,3vw,1.8rem); color: var(--primary-dark); font-weight:700; margin-top:1rem; }
+.hero-description { max-width: 34rem; margin-top: 1rem; color: var(--text); }
+.hero-actions { display:flex; gap:1rem; margin-top:2rem; flex-wrap:wrap; }
+.hero-rating { display:flex; align-items:center; gap:.6rem; margin-top:1.8rem; font-weight:700; color: var(--muted); }
+
+.hero-image { display:flex; justify-content:center; }
+.hero-plate { width: min(420px, 80vw); aspect-ratio: 1; border-radius:50%; background: radial-gradient(circle at 30% 30%, #fff, #ffe9d6); display:flex; align-items:center; justify-content:center; box-shadow: big; border: 10px solid #fff; }
+.hero-emoji { font-size: clamp(6rem, 14vw, 10rem); }
+
+/* Sections */
+.section { padding: 90px 0; }
+.section-alt { background: #fff; } maybe alternate backgrounds.
+.section-header { text-align:center; max-width: 640px; margin: 0 auto 3rem; }
+.section-subtitle { color: var(--muted); margin-top:.8rem; }
+.section-title { font-size: clamp(2rem, 5vw, 2.8rem); font-weight:900; position:relative; display:inline-block; }
+.section-title::after { content:''; position:absolute; bottom: -12px; ...; } maybe simple.
+
+/* Search */
+.search-box { position:relative; max-width: 520px; margin: 0 auto 2rem; }
+.search-box input { width:100%; padding: 1rem 3rem 1rem 1.2rem; border-radius:50px; border:2px solid var(--border); font-size:1.05rem; font-family:inherit; background:#fff; }
+.search-box input:focus { outline:none; border-color: var(--primary); box-shadow: 0 0 0 4px rgba(232,89,12,.12); }
+.search-icon { position:absolute; top:50%; inset-inline-start: 1.1rem; transform: translateY(-50%); color: var(--muted); }
+
+/* Category pills */
+.categories { display:flex; flex-wrap:wrap; gap:.7rem; justify-content:center; margin-bottom: 2.5rem; }
+.category-btn { border:2px solid var(--border); background:#fff; padding:.55rem 1.4rem; border-radius:50px; font-family:var(--font-heading); font-weight:700; color: var(--text); cursor:pointer; transition:.3s; }
+.category-btn:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+.category-btn.active { background: linear-gradient(135deg, var(--primary), var(--accent)); color:#fff; border-color: transparent; box-shadow: ...; }
+
+/* Menu grid */
+.menu-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.8rem; }
+.menu-card { background:#fff; border-radius: var(--radius); overflow:hidden; box-shadow: 0 6px 20px rgba(43,27,18,.06); border:1px solid #f9ece0; transition: transform .35s ease, box-shadow .35s ease; display:flex; flex-direction:column; }
+.menu-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+.card-image { position:relative; height:150px; background: linear-gradient(135deg, #fff1e0, #ffe0c7); display:flex; align-items:center; justify-content:center; }
+.card-emoji { font-size:4.5rem; transition: transform .35s ease; }
+.menu-card:hover .card-emoji { transform: scale(1.15) rotate(-5deg); }
+.card-category { position:absolute; top:.8rem; inset-inline-start:.8rem; background: rgba(255,255,255,.9); color: var(--primary-dark); font-size:.75rem; font-weight:800; padding:.2rem .8rem; border-radius:50px; }
+.card-body { padding: 1.2rem 1.3rem 1.4rem; display:flex; flex-direction:column; flex:1; }
+.card-title { font-size:1.25rem; font-weight:800; }
+.card-desc { color: var(--muted); font-size:.92rem; margin-top:.4rem; flex:1; }
+.card-footer { display:flex; align-items:center; justify-content:space-between; margin-top:1rem; }
+.card-price { font-family:var(--font-heading); font-size:1.5rem; font-weight:900; color: var(--primary); }
+.card-price small { font-size:.8rem; color: var(--muted); font-weight:700; }
+
+.empty-state { text-align:center; padding: 3rem 0; color: var(--muted); font-size:1.1rem; grid-column: 1/-1; }
+
+/* Offers */
+.offers-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.8rem; }
+.offer-card { position:relative; background:#fff; border-radius: var(--radius); padding: 2.2rem 1.8rem; text-align:center; box-shadow; overflow:hidden; border:1px solid #f9ece0; }
+.offer-badge { position:absolute; top:1rem; inset-inline-end:1rem; background: linear-gradient(135deg,#ff5f6d,#ffc371)? keep warm: linear-gradient(135deg, var(--primary), var(--accent)); color:#fff; padding:.35rem .9rem; border-radius:50px; font-weight:900; font-family:var(--font-heading); }
+...
+
+/* Why us */
+.why-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap:1.6rem; }
+.why-card { background:#fff; ...; text-align:center; padding:2rem 1.4rem; border-radius: var(--radius); }
+.why-icon { font-size:2.6rem; }
+
+/* Reviews */
+.reviews-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:1.8rem; }
+.review-card { background:#fff; border-radius:var(--radius); padding:2rem; box-shadow; position:relative; }
+.stars { color:#f5a623; letter-spacing:2px; font-size:1.1rem; }
+.review-text { margin: .8rem 0; font-size:.98rem; color: var(--text); }
+.review-author { display:flex; align-items:center; gap:.8rem; font-weight:700; }
+.review-avatar { width:44px; height:44px; border-radius:50%; background: linear-gradient(...); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-heading); font-weight:800; }
+
+/* Contact */
+.contact-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:1.6rem; margin-bottom: 2.5rem; }
+.contact-card { background: linear-gradient(160deg, #fff, #fff3e8); ...; border-radius: var(--radius); padding: 2rem 1.6rem; text-align:center; }
+.contact-icon { font-size:2.4rem; }
+.socials { display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap; }
+.social-btn { width:46px; height:46px; border-radius:50%; background:#fff; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color: var(--primary-dark); transition:.3s; }
+.social-btn:hover { background: var(--primary); color:#fff; transform: translateY(-4px); }
+
+/* Footer */
+.footer { background: var(--dark); color: #e8d5c8; padding: 60px 0 0; margin-top: 0; }
+.footer-grid { display:grid; grid-template-columns: 1.2fr 1fr 1fr; gap:2.5rem; padding-bottom: 2.5rem; }
+.footer h4 { color:#fff; margin-bottom:.8rem; }
+.footer a { color: inherit; text-decoration:none; }
+.footer-bottom { border-top:1px solid rgba(255,255,255,.12); text-align:center; padding:1.2rem; font-size:.9rem; }
+
+/* Back to top */
+.back-to-top { position:fixed; bottom: 1.5rem; inset-inline-end:1.5rem; width:48px; height:48px; border-radius:50%; background:linear-gradient(...); color:#fff; border:none; cursor:pointer; opacity:0; visibility:hidden; transition:.3s; z-index:999; box-shadow; }
+.back-to-top.show { opacity:1; visibility:visible; }
+.back-to-top:hover { transform: translateY(-4px); }
+
+/* Reveal animation */
+.reveal { opacity:0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity:1; transform: none; }
+
+/* Responsive */
+@media (max-width: 900px) { hero grid 1 column, hero plate hidden maybe smaller; footer grid 1col; }
+@media (max-width: 768px) { nav toggle display:flex; nav-links { position:fixed; top:70px; inset-inline:0; background:#fff; flex-direction:column; padding:1.5rem; transform: translateY(-150%); transition:.35s; box-shadow; border-radius: 0 0 20px 20px; } .nav-links.open { transform:none; } nav-order-btn maybe hide? keep. }
+@media (max-width: 560px) { menu-grid 1 col? auto-fill handles. section padding 60px. }
+
+@media (prefers-reduced-motion: reduce) { html{scroll-behavior:auto} .reveal{transition:none; opacity:1; transform:none} }
+```
+
+OK. Now JS:
+
+```js
+// ===== Mobile Navigation Toggle =====
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => { toggle class 'open'; aria-expanded });
+
+// close on link click; close on outside click maybe.
+
+// ===== Header scroll state =====
+window.addEventListener('scroll', () => { header.classList.toggle('scrolled', scrollY > 10); backToTop show; }, {passive:true});
+
+// ===== Active nav link on scroll (scrollspy-lite) =====
+// simple: on click set active; on scroll compute. Keep simple: click only + maybe scroll spy. I'll implement scroll spy via IntersectionObserver? Keep simple: on click set. And on scroll, find section in view. Simple implementation:
+
+// ===== Back to top =====
+backToTop click -> scrollTo top smooth.
+
+// ===== Reveal on scroll =====
+const revealObserver = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target);} }) }, {threshold: 0.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// ===== Category filter =====
+const categoryBtns = document.querySelectorAll('.category-btn');
+const menuCards = document.querySelectorAll('.menu-card');
+categoryBtns.forEach(btn => btn.addEventListener('click', () => {
+  categoryBtns.forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const cat = btn.dataset.category;
+  menuCards.forEach(card => {
+    const matches = cat === 'all' || card.dataset.category === cat;
+    card.style.display = matches ? '' : 'none';
+  });
+}));
+
+// ===== Search =====
+const searchInput = document.getElementById('menuSearch');
+let searchTimeout;
+searchInput.addEventListener('input', () => {
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(() => {
+    const query = searchInput.value.trim().toLowerCase();
+    menuCards.forEach(card => {
+      const title = card.dataset.name... 
+    });
+  }, 200);
+});
+
+// ===== WhatsApp buttons =====
+document.querySelectorAll('.btn-whatsapp').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const url = new URL('https://wa.me/967509730421', location.href);
+    const name = btn.dataset.name;
+    const price = btn.dataset.price;
+    const text = name ? `السلام عليكم، أود طلب:\nاسم المنتج: ${name}\nالسعر: ${price} ر.س` : 'السلام عليكم، أود طلب من مطعم الشعلة';
+    url.searchParams.set('text', encodeURIComponent(text));
+    window.open(url, '_blank');
+  });
+});
+```
+
+For offer buttons use class btn-whatsapp too but with different data-text. I'll give offers buttons class "btn btn-primary" with data-text attr, and JS: if btn.dataset.text exists use it.
+
+Search: cards need data-name. Add data-name and data-price on card, or read title from child element. Simpler: put data-name on card and filter by it plus desc.
+
+Card: `<article class="menu-card reveal" data-category="burger" data-name="برجر التحطيم" data-price="25">`.
+
+Search filtering: toggle display none based on name/desc includes query.
+
+Also results count display? Optional; skip or add small text. Skip for simplicity, but maybe add "no results" empty state which is shown via grid (grid-column). Empty state should be hidden when filtering? If no results, show empty state. Implementation: toggle empty state element display. I'll add `<p class="empty-state">` inside menu section, hidden by default; when search yields no matches show it.
+
+Back-to-top: button with class back-to-top, id backToTop.
+
+Footer year: `document.getElementById('year').textContent = new Date().getFullYear();`
+
+Smooth scroll for anchors: CSS scroll-behavior + scroll-padding handles it.
+
+Now, WhatsApp number: use 967509730421 consistently? The user said الرقم: 0509730421. wa.me format: country code 967 + number without leading 0 → 967509730421. Good.
+
+Now write the files.
+
+Let me write index.html fully now, being careful.
+
+For icons, I'll use <img src="assets/icons/whatsapp.svg" ...> inside buttons, plus alt text. Or use background. <img> is fine.
+
+Asset files to create:
+- assets/icons/favicon.svg
+- assets/icons/whatsapp.svg
+- assets/icons/phone.svg
+- assets/icons/clock.svg
+- assets/icons/location.svg
+- assets/icons/instagram.svg
+- assets/icons/facebook.svg
+- assets/icons/tiktok.svg
+- assets/icons/star.svg (maybe not needed; use ★ char)
+
+Let me write SVGs.
+
+whatsapp.svg (WhatsApp logo path, filled):
+The path I wrote above is roughly the WhatsApp icon path. Use fill="currentColor"? For img tag, currentColor doesn't apply; use fill="#25D366".
+
+phone.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8590c"><path d="M6.62 10.79a15.05 15.05 0 0024.95 0l-2.27-2.27a8.49 8.49 0 00-12.03 0L6.62 10.79zM12 2a10 10 0 100 20 10 10 0 000-20zm5.2 14.1c-.29.16-.66.48-1.04.55-.35.07-.66.12-.98.06-.34-.12-7.8-2.83-9.66-4.62-.27-.24-.45-.62-.52-.87-.06-.35-.01-.5.24-.68.23-.18.51-.31.79-.37.28-.06.56-.02.79.37.23.26.57.72.65 1 .08.26.03.5-.12.68l-.32.44c-.1.16-.22.2-.42.08-.35-.13-7.46-3.66-8.7-5.05-.22-.32-.54-.26-.77-.24-.27.02-.58.08-.88.44-.3.34-.57.8-.63 1.03-.07.33-.01.62.2.84.19.18.42.3.6.46.18.16.3.3.38.46.07.17.03.33-.05.46l-.24.33zm3.4-3.4a7.2 7.2 0 00-1.97-.97l-.28-.17a.73.73 0 00-.86.37c-.25.31-.66.77-.99.99l-.17.28a7.2 7.2 0 00-.97 1.97c-.14.34-.29.53-.66.53-.34 0-.63-.2-.87-.46l-.17-.28a.73.73 0 00-.37-.86l-.28-.17a7.2 7.2 0 00-1.97-.97 7.2 7.2 0 00-1.97.97l-.28.17a.73.73 0 00-.37.86c-.14.34-.29.53-.66.53-.34 0-.63-.2-.87-.46l-.17-.28a.73.73 0 00-.37-.86l-.17-.28a7.2 7.2 0 00-.97-1.97c-.14-.34-.29-.53-.66-.53-.34 0-.63.2-.87.46l-.28.17a.73.73 0 00-.37.86l.17.28a7.2 7.2 0 00.97 1.97l.28.17a.73.73 0 00.37.86l.17.28c.2.31.55.68.97 1z"/></svg>
+```
+
+Hmm I'm inventing a phone icon path; better use a standard simple phone SVG path. Let me use a simple one:
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8590c"><path d="M6.62 10.79a15.05 15.05 0 0024.95 0l-2.27-2.27a8.49 8.49 0 00-12.03 0L6.62 10.79zM12 2a10 10 0 100 20 10 10 0 000-20zm8.5 11.5c-.12.5-.66.9-1.2.95-.54.05-1.05-.2-1.2-.75-.15-.55-.7-1.1-1.25-1.25-.55-.15-1.05-.05-1.3.35-.25.4-.9 1.25-.9 2.45s.9 2.45.9 2.7c.05.25.35.95 1.05 1.3.7.35 1.4.5 1.7.55.35.05.7-.05 1.05-.4.35-.35.35-.75.35-1.05 0-.3 0-.65-.15-.9z"/></svg>
+```
+
+I'm not confident about these hand-made paths. Safer: use simple, definitely-valid SVG shapes.
+
+Phone: use a simple handset path — risky. Alternative: use emoji 📞 or a simple circle+phone glyph. To avoid invalid paths, I can use very simple SVG:
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8590c"><path d="M6.6 10.8a15.1 15.1 0 018.8 8.8l2.2-2.2a1 1 0 00-.3-.42l-3.4-3.4a1 1 0 00-.42-.3zm12.4 2.2a13.3 13.3 0 01-4.1.9 12.86 12.86 0 01-5.5-2l-.6-.35a1 1 0 00-.6-.2h-2.1a1 1 0 00-.98-.85l-2.8-.72a1 1 0 00-.85-.31 12.9 12.9 0 01-3.6-1.4 1 1 0 00-1 .9v3.1c0 .32.13.62.37.86l.82.82c.24.24.49.37.75.37h3.2c.32 0 .63-.13.86-.37l.82-.82c.24-.24.37-.49.37-.75v-2.8a1 1 0 00-.31-.85z"/></svg>
+```
+
+Still hand-made. Honestly, simplest robust approach: use minimal valid SVG paths. A known-good simple path for phone:
+
+"M6.62 10.79a15.05 15.05 0 0024.95 0l-2.27-2.27a8.49 8.49 0 00-12.03 0L6.62 10.79z" — this is actually the real WhatsApp-ish... no, that's from font-awesome whatsapp: `M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z</path></svg>
+```
+
+This is the actual Font Awesome WhatsApp path (I recall it fairly confidently). Good enough.
+
+For social icons, simple paths:
+- Instagram: M12 2.2c3.2 0 3.6 0 4.9.1 2.3.1 3.3.3 4 .5.6.2 1 .5 1.3.9.4.4.7.8.9 1.3.2.7.4 1.7.5 4 .1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 2.3-.3 3.3-.5 4-.2.6-.5.9-1.3 1.3-.4.4-.8.7-1.3.9-.7.2-1.7.4-4 .5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-2.3-.1-3.3-.3-4-.5a2.5 2.5 0 00-1.3-.9 2.5 2.5 0 00-1.3-.9c-.7-.2-1.7-.4-4-.5C8.6 15.8 8.2 15.8 6.9 15.8c-2.3.1-3.3.3-4 .5a2.5 2.5 0 00-1.3.9 2.5 2.5 0 00-.9 1.3c-.2.7-.4 1.7-.5 4-.1 1.3-.1 1.7-.1 4.9s0 3.6.1 4.9c.1 2.3.3 3.3.5 4 .2.6.5.9 1.3.9.4.4.8.7 1.3.9.7.2 1.7.4 4 .5 1.3.1 1.7.1 4.9.1s3.6 0 4.9-.1c2.3-.1 3.3-.3 4-.5.6-.2.9-.5 1.3-.9.4-.4.7-.8.9-1.3.2-.7.4-1.7.5-4 .1-1.3.1-1.7.1-4.9s0-3.6-.1-4.9c-.1-2.3-.3-3.3-.5-4a2.5 2.5 0 00-.9-1.3 2.5 2.5 0 00-1.3-.9c-.7-.2-1.7-.4-4-.5C8.6 15.8 8.2 15.8 6.9 15.8c-2.3.1-3.3.3-4 .5a2.5 2.5 0 00-1.3.9 2.5 2.5 0 00-.9 1.3c-.2.7-.4 1.7-.5 4-.1 1.3-.1 1.7-.1 4.9z M12 16a4 4 0 110-8 4 4 0 010 8zm6.9-6.9a1 1 0 10-1.4-1.4l-7.9 7.9 1.4 1.4z</path></svg>
+```
+
+Good, that's the real-ish Instagram path. Fine.
+
+Facebook: M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.49h-2.8V24C18.62 23.1 24 18.1 24 12.07z
+
+TikTok: harder. Use simple musical note or just a text/TikTok-ish path. I can use a simple note: 
+path for tiktok: complex. Alternative: use simple SVG with text? Simpler: use a note emoji 🎵 as icon. Or draw simple. I'll use a simple "note" path:
+"M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm6.94 8.53a6.5 6.5 0 1 1-5.5-6.5V16.8a4.5 4.5 0 1 0 2.5-3.2v8.6a3.5 3.5 0 1 1-3.5-3.5V9.3a2 2 0 1 0-4 0v8.8a4 4 0 1 0 2.5-1.8v4.1a1 1 0 1 0 2 0z"
+
+Hmm risky. Simpler safe path for tiktok-like icon: just use a simple music note path? Let me instead use text-based simple shapes:
+
+Actually simplest safe approach: create SVGs that are simple geometric shapes — e.g., for TikTok use a filled rounded shape with a note. Or just skip TikTok and use: Instagram, Facebook, Twitter/X, YouTube. Twitter path:
+"M23.5 6C23 3.8 21.3 2.1 19.1 1.6..." — risky too.
+
+Alternative: use universally simple icons I can write confidently:
+- WhatsApp: FA path (confident enough).
+- Phone: use simple handset — risky.
+
+Better idea: Use inline SVG with very simple paths I'm 100% sure of... I don't have a perfect memory of many paths.
+
+Safest: use emoji for social icons? Not great but acceptable. Or use text links like "انستغرام" with icon emoji 📸. Hmm, requirement says "أيقونات وسائل التواصل الاجتماعي". Emojis could pass but SVGs are nicer.
+
+Let me use simple, definitely-valid SVG paths:
+
+Phone: `<path d="M6.6 10.8a15.1 15.1 0 0 0 8.8 8.8l2.2-2.2a1 1 0 0 0-.3-.42l-3.4-3.4a1 1 0 0 0-.42-.3z"/><path d="M20 15.5a9.5 9.5 0 0 1-3.4-2.9l-.5-.35a1 1 0 0 0-1 0l-1.5.8a1 1 0 0 1-.5.2 9.9 9.9 0 0 1-9-9c0-.3 0-.6.2-.9l.8-1.4a1 1 0 0 0-.2-.8z"/>` — no, inventing again.
+
+OK, decisive approach: I'll write SVG files using only simple primitives and text-free paths that I design myself with circles/rects? Icons as paths are nicer but complex shapes risk invalidity.
+
+Actually, a really safe approach for simple icons: use SVG with basic shapes.
+
+- WhatsApp: use the FA path I recalled — I'm fairly confident it's the real WhatsApp icon path (it appears in many projects). Risk acceptable? If slightly off it still renders as a path shape, likely valid syntax. Let me use a definitely-valid simple design instead to be safe:
+
+whatsapp: circle background green + phone glyph? Complex.
+
+Alternative: use stroke-based icons with simple geometry:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10"/>
+<path d="M8 8h8v4H8z"/> ... 
+</svg>
+```
+Hand-drawn paths risky.
+
+Honestly, the cleanest: use text-based SVG where paths are simple lines/arcs I can write confidently. E.g., phone handset as a path with basic curves... still risky.
+
+New idea: avoid SVG path complexity by using emoji-based icons for social/contact (📞 📍 🕐) and inline SVG only for WhatsApp (using the known FA path). Actually even simpler: make ALL icons emoji. The design requirement mentions "أيقونات وسائل التواصل الاجتماعي" — emoji like 📸💬 works visually, and food emojis are already used for menu cards. This keeps everything robust and offline-friendly.
+
+But "assets للصور والأيقونات" — I'll still create SVG icon files (whatsapp, phone, clock, location, instagram, facebook, tiktok, star, close) with reasonably simple valid content, and use them via <img>. Let me design simple valid SVGs:
+
+whatsapp.svg — simple: green circle + white phone-ish? Let me just do the FA path; I'm confident about its syntax (it's a long valid path string).
+
+Actually let me reduce risk: I'll write icons using simple paths:
+
+whatsapp.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.94 1.25-.17.27-.34.3-.63.1-.3-.15-1.25-.46-2.39-1.52-.88-.79-1.47-1.76-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.3.46-.45.15-.15.2-.3.3-.5.1-.2.05-.38-.05-.55-.1-.15-.67-1.62-.92-2.21-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.08-.79.37-.27.27-1.04 1.02-1.04 2.55 0 1.53 1.06 3.02 1.21 3.22.15.2 2.09 3.2 5.08 4.48.71.31 1.27.5 1.71.64.71.22 1.36.19 1.87.12.57-.08 1.77-.72 2.03-1.42.25-.7.25-1.29.18-1.42-.07-.13-.28-.2-.58-.35m-5.4 7.42h-.004a9.87 9.87 0 0 1-5.03-1.38l-.36-.22-.3-.36 1.35-1.31a9.85 9.85 0 0 1 1.51-5.26c.01-5.45-4.44-9.88-9.88-9.88-5.45 0-9.89 4.44-9.89 9.88 0 5.45 4.44 9.88 9.89 9.88 1.25 0 2.38-.36 3.3-.54l.36.22 1.35 1.31z"/></svg>
+```
+
+Hmm the "m-5.4 7.42" relative moveto syntax is valid in path data. OK.
+
+This is getting long. Let me just accept writing these SVGs with the FA WhatsApp path (very standard) and simple others:
+
+phone.svg (simple handset-ish, use FA phone path?): FA phone: "M6.62 10.79a15.05 15.05 0 0 0 24.95 0l-2.27-2.27a8.49 8.49 0 0 0-12.01 0L6.62 10.79zM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18.11a8.11 8.11 0 0 1-4.16-1.15l-.3-.17a1 1 0 0 0-.96-.32 1 1 0 0 0-.86.55l-.19.32a1 1 0 0 1-1.02.37 10.75 10.75 0 0 1-4.99-2.5l-.3-.2a1 1 0 0 0-1-.06 8.64 8.64 0 0 0-2.39 1.88 1 1 0 0 0-.11.97v3.9a1 1 0 0 0 1 1h3.9a1 1 0 0 0 1-1v-3.9a1 1 0 0 0-.11-.97 8.64 8.64 0 0 0-2.39-1.88 1 1 0 0 0-.97-.11h-.3l-.2.3a1 1 0 0 1-1.02.37 10.75 10.75 0 0 1-4.99 2.5l-.3.2a1 1 0 0 1-.96.32h-.3a1 1 0 0 0-.86-.55l-.32-.19a1 1 0 0 1-.5-.2 10.75 10.75 0 0 1-2.5-4.99 1 1 0 0 1 .32-.96l.2-.3a1 1 0 0 1 1.02-.37 10.75 10.75 0 0 1 4.99-2.5l.3-.2a1 1 0 0 1 .96-.32h.3a1 1 0 0 1 .86.55l.32.32a1 1 0 0 1 .11.97v3.9a1 1 0 0 1-1 1h-3.9a1 1 0 0 1-1-1v-3.9a1 1 0 0 1 .11-.97l.32-.2a1 1 0 0 1 .96-.32h.3a1 1 0 0 1 .86.55l.32.32a1 1 0 0 1 .11.97v3.9a1 1 0 0 1-1 1z"/></svg>
+
+OK whatever, I'm burning time. Decision: write simple, clearly-valid SVGs. Even if icons are simplified geometric shapes, they'll be valid. Use FA paths where I'm confident (WhatsApp), and for others use very simple constructs.
+
+Simple valid designs:
+- phone.svg: green circle + white phone shape is hard; instead just use the FA-ish path above... ugh.
+
+FINAL DECISION: To guarantee validity and beauty, I'll write icons as simple SVG with basic shapes:
+
+- whatsapp.svg: `<svg ... viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#25D366"/><path d="M16 7a9 9 0 1 0 7.7 13.4L16 25l-2.6-2.6A9 9 0 0 0 16 7z" fill="#fff"/></svg>` — a speech bubble! Valid: arcs with absolute coords. Speech bubble path: M16 7 a9 9 0 1 0 7.7 13.4 L16 25 z. Circle + arc. Should be valid SVG path syntax (A command). Fine.
+
+- phone.svg: `<svg ... viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#e8590c"/><path d="M10 12h12v10H10z" ...>` no.
+
+Phone simple: use two rounded rects? `<rect x="7" y="10" width="4" height="12" rx="2"/><rect x="21" y="10" width="4" height="12" rx="2"/>` plus... that's a weird handset. Eh.
+
+Simplest safe: circle bg + white phone glyph using path with arcs... 
+
+You know what, let me just use stroke-based icons built from simple paths I'm confident render okay:
+
+phone: `<path d="M7 3h6a2 2 0 0 1 2 2v4l3 3-3 3v4a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>` — a phone handset-ish rectangle. Valid path (all relative/absolute commands simple). Actually let me design better: classic phone handset shape is complex; a simple receiver is fine.
+
+Alternatively — pragmatic and clean: use emoji for ALL icons (📞 📍 🕐 💬 📸 📘 🎵 ⭐ etc.) and only WhatsApp/Facebook/Instagram/TikTok get simple SVGs. Honestly emoji icons look fine on modern sites and are 100% robust.
+
+FINAL PLAN for assets:
+- assets/icons/favicon.svg — 🔥 emoji text in svg (valid: <text>).
+- assets/icons/whatsapp.svg — green circle + white speech bubble path (valid-ish).
+- assets/icons/instagram.svg — rounded square + circle + dot? Simple: `<rect .../><circle .../><circle .../>` with fill. Valid.
+- assets/icons/facebook.svg — similar simple: circle + "f"? Use simple: green circle with white "f" letter text? Text in SVG works. `<text>` with font. Simpler: white lowercase f path... just use text element: `<text x="16" y="21" font-size="18" font-family="Arial" font-weight="bold" fill="#fff" text-anchor="middle">f</text>`. Valid SVG.
+- tiktok: dark circle + musical note via text 🎵? Use `<text>` emoji too. Hmm mixing.
+
+This is getting silly. Simplify: social icons = simple circles with white glyph letters/emoji text:
+- instagram: green circle + white camera emoji? Just use text emoji 🎥? Meh.
+
+New final decision (for real): Use emoji-based icons throughout for social/contact, and create SVG favicon + WhatsApp icon files. Menu cards use food emojis with gradient backgrounds — looks modern. Social row: circular buttons with emoji: 📸 (instagram), 📘 (facebook), 🐦 (twitter)... 
+
+Hmm, but professional look... Emoji in circles actually looks decent.
+
+Let me instead write proper simple SVG paths using only shapes I can construct confidently:
+
+Instagram icon (simple, valid):
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#E1306C">
+<rect x="2" y="2" width="20" height="20" rx="6"/>
+<circle cx="12" cy="12" r="4.5" fill="#fff"/>
+<circle cx="17.5" cy="6.5" r="1.5" fill="#fff"/>
+</svg>
+```
+Wait rect with rx — valid. Circles valid. 
+
+Facebook:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1877F2">
+<circle cx="12" cy="12" r="12"/>
+<text x="12" y="17" font-family="Arial" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">f</text>
+</svg>
+```
+Text in SVG — should render in browsers. OK.
+
+TikTok:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000">
+<circle cx="12" cy="12" r="12"/>
+<path d="M16 4c1 3 4 4 4 8a4 4 0 0 1-4 4c-3 0-5-2-5-5V8h3v4c0 1.7 1.3 3 3 3s3-1.3 3-3V4h3z"/>
+</svg>
+```
+Invented path — might look weird but valid syntax? Path with multiple subpaths and absolute coords: "M16 4c1 3 4 4 4 8a4 4 0 0 1-4 4c-3 0-5-2-5-5V8h3v4c0 1.7 1.3 3 3 3s3-1.3 3-3V4h3z" — commands: M, c, a, c, V, h, c, s, c, V, h, c, z. Valid command syntax? "M16 4c1 3 4 4 4 8a4 4 0 0 1-4 4c-3 0-5-2-5-5V8h3v4c0 1.7 1.3 3 3 3s3-1.3 3-3V4h3z" — hmm "h3v4c0 1.7" — implicit command repetition is allowed (h, v, c are lineto commands, can chain). Should be valid. Fine, worst case it's a slightly odd shape but renders.
+
+Honestly, simplest bulletproof: make TikTok icon just the music note as text emoji inside colored circle? No...
+
+STOP. Simplify drastically: social icons will be circular buttons containing simple SVG I fully control with basic shapes:
+
+- Instagram: rect + circle + dot (valid shapes above). ✓
+- Facebook: green circle + white "f" text. ✓ (or just blue circle; fine)
+- X/Twitter: black circle + white "𝕏"? text with unicode might not render. Use "X" text. ✓
+- YouTube: red circle + white play triangle: `<path d="M10 8l6 4-6 4z" fill="#fff"/>` — triangle path, valid. ✓
+
+Good — all shapes/text, no risky curves. 
+
+- clock.svg: amber circle + white clock hands: `<circle cx="12" cy="12" r="12" fill="#F59F00"/><path d="M12 7v5l3.5 2" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>` — stroke attributes valid. ✓
+- location.svg: red/teal pin: circle + path... pin shape: `<path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/>` plus center circle: `<circle cx="12" cy="10" r="3" fill="#fff"/>`. Valid-ish. Arc "a7 7 0 1 0-14 0" — relative arc to same point = full circle, valid. OK.
+- phone.svg: reuse simple: `<path d="M8 2h6a2 2 0 0 1 2 2v3l2 3-2 3v3a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>` hmm invented. Use simpler: handset as two rounded rects rotated? Just do circle + phone glyph text? 
+
+Simplest valid phone: `<svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 8.8 8.8l2.2-2.2a1 1 0 0 0-.42-.3l-3.4-3.4a1 1 0 0 0-.3-.42z"/><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg>` — paths with simple moves and lines/arcs... "M6.6 10.8a15 15 0 0 0 8.8 8.8l2.2-2.2a1 1 0 0 0-.42-.3l-3.4-3.4a1 1 0 0 0-.3-.42z" — valid path syntax (M, a, l, a, l, z). ✓ arcs with relative flags valid.
+
+Good enough. These are decorative icons anyway.
+
+WhatsApp speech bubble: `<path d="M12 2a10 10 0 0 0-8.6 15L2 22l4.4-1.2A10 10 0 1 0 12 2z"/>` — hmm arc "a10 10 0 1 0-8.6 15" — absolute arc from (2,2)? This is getting complicated; use simpler bubble: `<path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.5 5L2 22l5-1.3C7.5 21.5 9.3 22 11 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/>` — arc "a10 10 0 0 0" relative small arc, fine, and final close. Should be valid. Eh, small errors in path data break rendering entirely (browser error → maybe fallback). Risky!
+
+SAFEST: avoid arcs entirely except circles via <circle> elements and lines. Design icons from circles/rects/lines/text only:
+
+- whatsapp: green circle + white phone = phone glyph hard without arcs... 
+
+Alternative safest: WhatsApp icon = green circle + white chat bubble drawn as... bubble needs curves. Use rect + triangle? A chat bubble: circle with tail. Meh.
+
+Use instead: WhatsApp = just the green circle with white phone — phone as path with only M/L commands? Handset needs curves. Use rect-based handset:
+`<rect x="8" y="2" width="16" height="28" rx="8" transform="rotate(90 16 16)"/>` — rect with rx and transform, all basic shapes! Valid. 
+
+- phone icon: green circle + white handset rect rotated: same trick. Or teal circle + white rect rotated. Fine.
+- clock: amber circle + white line hands via lines: `<line x1="12" y1="12" x2="12" y2="7" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="12" y1="12" x2="16.5" y2="14" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>` — lines valid! ✓
+- location: red pin: circle top + path cone... cone needs polygon points: `<polygon points="12,2 4,20 12,16 20,20" fill="#fff"/>` + `<circle cx="12" cy="9" r="3.5" fill="#E03131"/>`? Pin: circle at (12,8) r=3.5, polygon from (12,10) to (4,20)... roughly a teardrop. Good enough, basic shapes only. ✓
+- instagram: rect+rounded rect+circles as above ✓
+- facebook: blue circle + white text "f" ✓
+- tiktok: black circle + white text "♪"? or simple black rounded square + white note... use text "♪"? risky font. Use text "T"? Ugly.
+
+TikTok: use black circle + white simple waveform: several vertical lines? `<rect x="8" y="4" width="2.5" height="8" fill="#fff"/><rect x="12" y="6" width="2.5" height="12" .../>` — waveform-ish, basic shapes ✓.
+
+- star: gold circle + white star? Star needs path... use text "★" with fill gold — text glyph, generally renders. Or just use "★★★★★" characters directly in HTML/CSS. I'll use ★ characters in HTML (already planned).
+
+- whatsapp message bubble for offers? no.
+
+- close/X for mobile nav: two lines: `<line ... stroke="currentColor"/>` — line element valid ✓.
+
+OK. Now icon usage: I'll use <img src="assets/icons/xxx.svg" alt="..."> for: whatsapp, phone, clock, location, instagram, facebook, tiktok, close. Colors inside SVG fixed (not currentColor).
+
+WhatsApp SVG (final):
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <circle cx="16" cy="16" r="16" fill="#25D366"/>
+  <g transform="rotate(90 16 16)">
+    <rect x="11" y="3" width="10" height="26" rx="5" fill="#fff"/>
+  </g>
+</svg>
+```
+Handset rotated — ok cute.
+
+Hmm wait, for buttons I want the icon next to text; using <img> with fixed size is fine.
+
+Let me finalize all SVG files now and write them.
+
+favicon.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <text y="0.9em" font-size="90">🔥</text>
+</svg>
+```
+✓ (emoji in svg text renders in browsers generally).
+
+Now write all files. Start with assets, then style.css, script.js, index.html.
+
+Let me now write the complete index.html content mentally structured:
+
+Sections order: header, hero, menu, offers, about (why us), reviews, contact, footer, back-to-top.
+
+Let me write it.
+
+For the hero background: CSS gradient + decorative blurred circles via ::before/::after or extra divs. I'll use body::before? Simpler: hero has background: linear-gradient + a radial pattern via background-image radial-gradients.
+
+Write CSS fully now (long).
+
+I'll write the files one by one with the write tool.
+
+HTML details:
+
+Header nav: hide "اطلب الآن" text on small? Keep.
+
+Let me draft index.html completely:
+
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  ...
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar container">
+      <a href="#home" class="logo" aria-label="مطعم الشعلة - الرئيسية">
+        <span class="logo-icon" aria-hidden="true">🔥</span>
+        <span class="logo-text">مطعم <span class="logo-accent">الشعلة</span></span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">الرئيسية</a></li>
+        <li><a href="#menu" class="nav-link">المنيو</a></li>
+        <li><a href="#offers" class="nav-link">العروض</a></li>
+        <li><a href="#about" class="nav-link">لماذا نحن</a></li>
+        <li><a href="#reviews" class="nav-link">آراء العملاء</a></li>
+        <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+      </ul>
+
+      <a href="https://wa.me/967509730421" target="_blank" rel="noopener" class="btn btn-whatsapp nav-cta">
+        <img src="assets/icons/whatsapp.svg" alt="واتساب" width="20" height="20" decoding="async">
+        <span>اطلب الآن</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-controls="navMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+```
+
+Note: nav CTA might crowd mobile; hide text span on small screens via CSS (keep icon).
+
+Hero:
+
+```html
+<section class="hero" id="home">
+  <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+  <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <span class="hero-badge reveal">🔥 مطعم أطيب الأطباق الشرقية</span>
+      <h1 class="hero-title reveal">مطعم <span class="hero-title-accent">الشعلة</span></h1>
+      <p class="hero-greeting reveal">مرحباً بك في مطعم الشعلة! 😋</p>
+      <p class="hero-text reveal">أكل شهي بلمسة عربية — مكونات طازجة يومياً، مشاوي شواية، وأطباق شرقية أصيلة.</p>
+      <div class="hero-actions reveal">
+        <a href="#menu" class="btn btn-primary btn-lg">🍽️ عرض المنيو</a>
+        <a href="https://wa.me/967509730421" target="_blank" rel="noopener" class="btn btn-outline btn-lg">📲 اطلب الآن</a>
+      </div>
+      <div class="hero-rating reveal">
+        <span class="hero-stars" aria-label="تقييم 5 من 5">★★★★★</span>
+        <span>تقييم 4.9/5 · +1200 عميل يحبوننا</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-plate" aria-hidden="true">
+        <span class="hero-emoji">🍔🍕</span>
+      </div>
+      <div class="hero-card hero-card-1" aria-hidden="true">🥘 وجبة مشوية</div>
+      <div class="hero-card hero-card-2" aria-hidden="true">🥗 سلطة طازجة</div>
+    </div>
+  </div>
+</section>
+```
+
+Hmm hero-visual with floating cards. OK.
+
+Menu section:
+
+```html
+<section class="section" id="menu">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-badge">🍽️</span>
+      <h2 class="section-title">المنيو</h2>
+      <p class="section-subtitle">مكونات طازجة يومياً · أطباق شهية بأسعار مناسبة</p>
+    </div>
+
+    <div class="menu-controls reveal">
+      <div class="search-box">
+        <img src="assets/icons/search.svg" ...>  -- need search icon asset!
+```
+
+I forgot search icon. Add assets/icons/search.svg.
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#8a7364" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+```
+Lines/circle valid ✓.
+
+Categories:
+```html
+<div class="categories" role="group" aria-label="تصنيفات المنيو">
+  <button class="category-btn active" data-category="all">✨ الكل</button>
+  <button class="category-btn" data-category="burger">🍔 البرغر</button>
+  ...
+</div>
+```
+
+Menu grid with cards.
+
+Offers:
+```html
+<section class="section section-alt" id="offers">
+  header: 🏷️ العروض والخصومات
+  3 offer cards:
+  - 🍕 خصم البيتزا: خصم 20% على جميع البيتزا — "عرض شهر أكتوبر — اطلب بيتزا واحدة واحصل على الثانية مجاناً" CTA: "اطلب عبر واتساب"
+  - 🍗 وجبة العائلة: بسعر 180 ر.س وجبة 4 أشخاص بدلاً من 240 ر.س.
+  - 🥤 خصم المشروبات: خصم 15% على المشروبات والعصائر.
+```
+
+Offer card CTA: `<a href="https://wa.me/967509730421?text=..." class="btn btn-primary">`. For dynamic: use button with data-offer text and class btn-primary (not whatsapp)? Requirement: buttons "اطلب الآن" open wa.me. Offer buttons can also be whatsapp. I'll make offer CTA buttons `<button class="btn btn-primary offer-btn" data-offer="...">احجز الآن</button>` handled in JS to open wa.me with offer text; or simply use href with template text. Simpler: give them class "btn btn-primary" and data-text, JS intercepts click (preventDefault) and opens wa.me with data-text. And regular menu whatsapp buttons class "btn btn-whatsapp" with data-name/data-price.
+
+Actually unify: buttons with class btn-whatsapp carry data-name; offer buttons carry data-offer. JS:
+
+```js
+const waButtons = document.querySelectorAll('[data-wa]');
+```
+Let me just use a common class `wa-btn` on all buttons that open whatsapp, with data-name or data-offer. Hmm, but CSS .btn-whatsapp colors green. I'll use class "btn btn-whatsapp" for menu items and "btn btn-primary" for offers, plus data attributes, and JS uses `data-wa-text ||` fallback message. Cleaner: give all such buttons `data-wa-text` attribute:
+
+- menu: data-wa-text="اسم المنتج: برجر التحطيم"
+- offers: data-wa-text="عرض: خصم البيتزا"
+
+and build final message:
+```
+السلام عليكم، أود طلب:
+${dataWAText}
+```
+Hmm requirement message:
+```
+السلام عليكم، أود طلب:
+اسم المنتج: [اسم المنتج]
+السعر: [السعر]
+```
+So for menu items, must include السعر. Use data-name + data-price for menu, data-offer for offers.
+
+JS:
+```js
+document.querySelectorAll('.btn-wa').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const base = 'السلام عليكم، أود طلب:\n';
+    const msg = btn.dataset.name
+      ? base + `اسم المنتج: ${btn.dataset.name}\nالسعر: ${btn.dataset.price} ر.س`
+      : base + btn.dataset.offer;
+    const url = `https://wa.me/967509730421?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
+  });
+});
+```
+And hero "اطلب الآن" and nav CTA can be plain <a href="https://wa.me/967509730421" ...>.
+
+CSS class: `.btn-wa { background:#25D366; ... }` reuse btn-whatsapp.
+
+About section (#about): "لماذا نحن؟" — 4 feature cards:
+- 🥬 مكونات طازجة: "نجمع المكونات من أفضل المصانع والخضار الطازجة يومياً"
+- 🛵 توصيل سريع: "توصيل سريع لجميع المدن خلال ساعات قليلة"
+- ⭐ جودة عالية: "نضيف لك أطباقاً بجودة تشكيلتها العالمية"
+- 💰 أسعار مناسبة: "أسعار تنافسية تضمن أكل شهي بلا إسراف"
+
+Reviews (#reviews): 3 cards:
+- "رائعة! الأكل كان لذيذاً والجودة ممتازة. سأعود بالتأكيد." — سارة الأحمد
+- "تجربة رائعة، التوصيل كان سريعاً والطعام مطابق للوصف." — محمد الخالد
+- "بيتي أحب أكل الشاورما، جودة ممتازة والأسعار معقولة." — عائلة عبدالله
+
+Contact (#contact): 
+- phone card: <a href="tel:+967509730421"> <img phone> 0509730421
+- hours: ⏰ السبت - الخميس: 12:00 - 23:00 | الأحد: مغلق
+- location: 📍 العنوان: ... (placeholder) "شارع الملك فهد، حي النخيل"
+
+Socials: instagram/facebook/tiktok links (href="#" placeholder or real? use "#" with aria-label; better use real-looking? Use "#" placeholder fine... maybe use https://instagram.com/ URLs? Unknown. Use "#").
+
+WhatsApp big CTA in contact: "اطلب عبر واتساب الآن".
+
+Footer: about text, quick links (same ids), contact mini, copyright year via JS.
+
+Back-to-top: `<button class="back-to-top" id="backToTop" aria-label="العودة إلى الأعلى">↑</button>` or arrow SVG. Use ↑ char or svg arrow. Use simple svg arrow-up path? Just use "↑" text — fine, or CSS triangle. I'll use SVG simple: `<svg viewBox="0 0 24 24"><path d="M12 4l8 8h-3v8h-4v-8H4v-8z"/></svg>`? Eh. Just use "↑".
+
+Now write CSS completely. I'll aim for polished design.
+
+Font sizes, spacing etc. Let me write it.
+
+Also add `scroll-margin-top` for sections (since scroll-padding-top on html handles anchor offset; use both).
+
+Write files now. First assets.
+
+assets/icons/favicon.svg, whatsapp.svg, phone.svg, clock.svg, location.svg, instagram.svg, facebook.svg, tiktok.svg, close.svg, search.svg.
+
+Let me define:
+
+favicon.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <text y="0.85em" font-size="88">🔥</text>
+</svg>
+```
+
+whatsapp.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <circle cx="16" cy="16" r="16" fill="#25D366"/>
+  <rect x="10" y="2" width="12" height="28" rx="6" fill="#fff" transform="rotate(90 16 16)"/>
+</svg>
+```
+Handset: rect 10x28 rotated 90 → looks like phone-ish. Fine.
+
+phone.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <circle cx="16" cy="16" r="16" fill="#E8590C"/>
+  <rect x="9" y="2" width="12" height="28" rx="6" fill="#fff" transform="rotate(90 16 16)"/>
+</svg>
+```
+
+clock.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <circle cx="16" cy="16" r="16" fill="#F59F00"/>
+  <line x1="16" y1="10" x2="16" y2="16" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="16" y1="16" x2="20.5" y2="18.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
+```
+
+location.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <circle cx="16" cy="16" r="16" fill="#E03131"/>
+  <circle cx="16" cy="11" r="5" fill="#fff"/>
+  <path d="M16 17v9" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M11 22h10" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
+```
+Hmm pin: circle at cy=11 r=5 top of pin at y=6, lines down to 22 — roughly pin shape. OK.
+
+instagram.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <rect x="2" y="2" width="20" height="20" rx="6" fill="#E1306C"/>
+  <rect x="5.5" y="5.5" width="13" height="13" rx="4" fill="#fff"/>
+  <circle cx="12" cy="12" r="3.2" fill="#E1306C"/>
+</svg>
+```
+
+facebook.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <circle cx="16" cy="16" r="16" fill="#1877F2"/>
+  <text x="16" y="21.5" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#fff" text-anchor="middle">f</text>
+</svg>
+```
+
+tiktok.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <circle cx="16" cy="16" r="16" fill="#111"/>
+  <rect x="7" y="6" width="3" height="12" rx="1.5" fill="#fff"/>
+  <rect x="12" y="8" width="3" height="16" rx="1.5" fill="#fff"/>
+  <rect x="17" y="4" width="3" height="20" rx="1.5" fill="#fff"/>
+</svg>
+```
+
+close.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <line x1="5" y1="5" x2="19" y2="19" stroke="#2B1B12" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="19" y1="5" x2="5" y2="19" stroke="#2B1B12" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
+```
+
+search.svg:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <circle cx="11" cy="11" r="7" fill="none" stroke="#8a7364" stroke-width="2"/>
+  <line x1="20" y1="20" x2="15.5" y2="15.5" stroke="#8a7364" stroke-width="2" stroke-linecap="round"/>
+</svg>
+```
+✓ valid (circle + line with stroke).
+
+Good. Now write all the files.
+
+Now full CSS. Let me write it out.
+
+```css
+/* ============================================================
+   مطعم الشعلة - style.css
+   تصميم متجر مطعم احترافي | HTML + CSS + JS
+   ============================================================ */
+
+/* ---------- المتغيرات ---------- */
+:root {
+  --primary: #e8590c;
+  --primary-dark: #d9480f;
+  --accent: #f59f00;
+  --bg: #fff8f0;
+  --surface: #ffffff;
+  --dark: #2b1b12;
+  --text: #54382a;
+  --muted: #8a7364;
+  --border: #f5e3d3;
+  --success: #25d366;
+  --gold: #f5a623;
+  --shadow-sm: 0 4px 14px rgba(43, 27, 18, .06);
+  --shadow-md: 0 12px 30px rgba(232, 89, 12, .14);
+  --shadow-lg: 0 20px 45px rgba(232, 89, 12, .22);
+  --radius: 18px;
+  --font-heading: 'Cairo', 'Segoe UI', sans-serif;
+  --font-body: 'Tajawal', 'Segoe UI', sans-serif;
+}
+
+/* ---------- الأساسيات ---------- */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--dark); line-height: 1.3; }
+.container { width: min(1140px, 92%); margin-inline: auto; }
+.section { padding: 96px 0; }
+.section-alt { background: var(--surface); }
+...
+```
+
+Continue writing all sections. I'll write the final file content in the write call.
+
+Key components:
+
+Buttons:
+```css
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; font-family: var(--font-heading); font-weight: 700; font-size: 1rem; border: none; cursor: pointer; border-radius: 999px; padding: .9rem 1.9rem; transition: transform .3s ease, box-shadow .3s ease, background .3s ease, color .3s ease; }
+.btn-lg { padding: 1.05rem 2.4rem; font-size: 1.12rem; }
+.btn-sm { padding: .5rem 1.15rem; font-size: .9rem; }
+.btn-primary { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; box-shadow: 0 10px 22px rgba(232,89,12,.35); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(232,89,12,.45); }
+.btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+.btn-outline:hover { background: var(--primary); color: #fff; transform: translateY(-3px); }
+.btn-whatsapp { background: var(--success); color: #fff; box-shadow: 0 10px 22px rgba(37,211,102,.35); }
+.btn-whatsapp:hover { transform: translateY(-3px); background: #1ebe5b; box-shadow: 0 14px 28px rgba(37,211,102,.45); }
+```
+
+Header:
+```css
+.site-header { position: fixed; top: 0; inset-inline: 0; z-index: 1000; background: rgba(255,248,240,.9); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transition: box-shadow .3s ease, background .3s ease; }
+.site-header.scrolled { box-shadow: 0 6px 24px rgba(43,27,18,.08); }
+.navbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 0; }
+.logo { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-heading); font-weight: 800; font-size: 1.35rem; color: var(--dark); }
+.logo-icon { font-size: 1.9rem; }
+.logo-accent { color: var(--primary); }
+.nav-menu { display: flex; align-items: center; gap: .35rem; }
+.nav-link { display: block; padding: .5rem 1rem; border-radius: 999px; font-weight: 700; font-size: .95rem; color: var(--text); transition: .3s; }
+.nav-link:hover { color: var(--primary); background: #ffeee2; }
+.nav-link.active { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; box-shadow: 0 6px 14px rgba(232,89,12,.3); }
+.nav-cta { margin-inline-start: .6rem; }
+.nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; border-radius: 10px; }
+.nav-toggle span { width: 26px; height: 3px; background: var(--dark); border-radius: 3px; transition: .3s; }
+.nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+```
+
+Hero:
+```css
+.hero { position: relative; min-height: 100svh; display: flex; align-items: center; padding: 150px 0 90px; background: linear-gradient(150deg, #fff6ec 0%, #ffe9d6 45%, #ffd8b8 100%); overflow: hidden; }
+.hero::before / blobs using absolute divs .hero-blob.
+.hero-inner { display: grid; grid-template-columns: 1.05fr .95fr; gap: 2.5rem; align-items: center; position: relative; z-index: 1; }
+.hero-badge { display: inline-block; background: #fff; color: var(--primary-dark); font-weight: 800; padding: .45rem 1.2rem; border-radius: 999px; box-shadow: var(--shadow-sm); font-size: .9rem; }
+.hero-title { font-size: clamp(3rem, 7.5vw, 5.2rem); font-weight: 900; margin-top: 1.2rem; }
+.hero-title-accent { color: var(--primary); position: relative; }
+.hero-greeting { font-family: var(--font-heading); font-size: clamp(1.25rem, 2.6vw, 1.7rem); font-weight: 700; color: var(--primary-dark); margin-top: 1.1rem; }
+.hero-text { margin-top: .9rem; max-width: 32rem; font-size: 1.08rem; }
+.hero-actions { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+.hero-rating { display: flex; align-items: center; gap: .6rem; margin-top: 1.9rem; color: var(--muted); font-weight: 700; font-size: .95rem; }
+.hero-stars { color: var(--gold); letter-spacing: .15em; }
+.hero-visual { position: relative; display: flex; justify-content: center; }
+.hero-plate { width: min(400px, 78vw); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 32% 28%, #ffffff, #ffe8d2 70%); border: 12px solid #fff; box-shadow: var(--shadow-lg); display: flex; align-items: center; justify-content: center; }
+.hero-emoji { font-size: clamp(5rem, 11vw, 8rem); }
+.hero-card { position: absolute; background: #fff; border-radius: 16px; box-shadow: var(--shadow-md); padding: .7rem 1.2rem; font-weight: 800; font-family: var(--font-heading); font-size: .95rem; display: flex; gap: .5rem; align-items: center; animation: float 4s ease-in-out infinite; }
+.hero-card-1 { top: 6%; inset-inline-start: -4%; }
+.hero-card-2 { bottom: 8%; inset-inline-end: -3%; animation-delay: 1.6s; }
+@keyframes float { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-12px);} }
+```
+
+Sections header:
+```css
+.section-header { text-align: center; max-width: 620px; margin: 0 auto 3rem; }
+.section-badge { font-size: 2.4rem; }
+.section-title { font-size: clamp(2rem, 5vw, 2.9rem); font-weight: 900; position: relative; display: inline-block; }
+.section-title::after { content: ''; position: absolute; bottom: -14px; inset-inline: 0; height: 5px; border-radius: 5px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
+.section-subtitle { color: var(--muted); margin-top: 1.4rem; }
+```
+
+Controls:
+```css
+.menu-controls { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; margin-bottom: 2.6rem; }
+.search-box { position: relative; width: min(520px, 100%); }
+.search-box img { position: absolute; top: 50%; inset-inline-start: 1.15rem; transform: translateY(-50%); width: 22px; height: 22px; }
+.search-box input { width: 100%; padding: 1rem 1.3rem 1rem 3.4rem; border-radius: 999px; border: 2px solid var(--border); background: #fff; font-family: var(--font-body); font-size: 1.02rem; font-weight: 500; color: var(--text); transition: .3s; }
+.search-box input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 4px rgba(232,89,12,.12); }
+.categories { display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center; }
+.category-btn { border: 2px solid var(--border); background: #fff; color: var(--text); font-family: var(--font-heading); font-weight: 700; font-size: .95rem; padding: .55rem 1.35rem; border-radius: 999px; cursor: pointer; transition: .3s; }
+.category-btn:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+.category-btn.active { background: linear-gradient(135deg, var(--primary), var(--accent)); border-color: transparent; color: #fff; box-shadow: 0 8px 18px rgba(232,89,12,.32); }
+```
+
+Menu grid/cards:
+```css
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(258px, 1fr)); gap: 1.7rem; }
+.menu-card { background: #fff; border-radius: var(--radius); overflow: hidden; border: 1px solid #f9ece0; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; transition: transform .35s ease, box-shadow .35s ease; }
+.menu-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
+.card-image { position: relative; height: 158px; background: linear-gradient(135deg, #fff1e0, #ffe1c4); display: flex; align-items: center; justify-content: center; }
+.card-emoji { font-size: 4.4rem; transition: transform .4s ease; }
+.menu-card:hover .card-emoji { transform: scale(1.15) rotate(-6deg); }
+.card-category { position: absolute; top: .8rem; inset-inline-start: .8rem; background: rgba(255,255,255,.92); color: var(--primary-dark); font-size: .74rem; font-weight: 800; padding: .28rem .85rem; border-radius: 999px; }
+.card-body { padding: 1.15rem 1.25rem 1.35rem; display: flex; flex-direction: column; flex: 1; }
+.card-title { font-size: 1.22rem; font-weight: 800; }
+.card-desc { color: var(--muted); font-size: .92rem; margin-top: .35rem; flex: 1; }
+.card-footer { display: flex; align-items: center; justify-content: space-between; gap: .8rem; margin-top: 1.05rem; }
+.card-price { font-family: var(--font-heading); font-size: 1.55rem; font-weight: 900; color: var(--primary); }
+.card-price small { font-size: .8rem; color: var(--muted); font-weight: 700; }
+.empty-state { display: none; text-align: center; color: var(--muted); padding: 3rem 0; font-size: 1.1rem; }
+.empty-state.visible { display: block; }
+```
+
+Offers:
+```css
+.offers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; }
+.offer-card { position: relative; background: #fff; border: 1px solid #f9ece0; border-radius: var(--radius); padding: 2.4rem 1.8rem 1.8rem; text-align: center; box-shadow: var(--shadow-sm); overflow: hidden; transition: .35s; }
+.offer-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
+.offer-badge { position: absolute; top: 1rem; inset-inline-end: 1rem; background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; font-family: var(--font-heading); font-weight: 800; font-size: .85rem; padding: .35rem .9rem; border-radius: 999px; box-shadow: 0 6px 14px rgba(232,89,12,.35); }
+.offer-emoji { font-size: 3.4rem; }
+.offer-title { font-size: 1.4rem; font-weight: 800; margin-top: .6rem; }
+.offer-desc { color: var(--muted); margin-top: .5rem; }
+.offer-price { margin-top: 1rem; font-family: var(--font-heading); font-weight: 900; color: var(--primary); font-size: 1.5rem; }
+```
+
+About/why:
+```css
+.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.6rem; }
+.why-card { background: #fff; border: 1px solid #f9ece0; border-radius: var(--radius); padding: 2rem 1.4rem; text-align: center; box-shadow: var(--shadow-sm); transition: .35s; }
+.why-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.why-icon { width: 68px; height: 68px; margin: 0 auto 1rem; border-radius: 50%; background: linear-gradient(135deg, #fff1e0, #ffe0c7); display: flex; align-items: center; justify-content: center; font-size: 1.9rem; }
+.why-card h3 { font-size: 1.2rem; font-weight: 800; }
+.why-card p { color: var(--muted); font-size: .93rem; margin-top: .4rem; }
+```
+
+Reviews:
+```css
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.8rem; }
+.review-card { position: relative; background: #fff; border: 1px solid #f9ece0; border-radius: var(--radius); padding: 2.1rem 1.8rem 1.6rem; box-shadow: var(--shadow-sm); transition: .35s; }
+.review-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.review-stars { color: var(--gold); font-size: 1.05rem; letter-spacing: .2em; }
+.review-text { margin: 1rem 0 .6rem; font-size: .98rem; }
+.review-author { display: flex; align-items: center; gap: .8rem; font-weight: 800; }
+.review-avatar { width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 800; }
+```
+
+Contact:
+```css
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.6rem; margin-bottom: 2.6rem; }
+.contact-card { background: linear-gradient(160deg, #fff, #fff3e8); border: 1px solid #f9ece0; border-radius: var(--radius); padding: 2rem 1.5rem; text-align: center; box-shadow: var(--shadow-sm); transition: .35s; }
+.contact-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.contact-icon { font-size: 2.6rem; margin-bottom: .6rem; }
+.contact-card h3 { font-size: 1.25rem; font-weight: 800; }
+.contact-card p { color: var(--muted); font-size: .95rem; margin-top: .3rem; }
+.socials { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; margin-top: 2.2rem; }
+.social-btn { width: 50px; height: 50px; border-radius: 50%; background: #fff; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; transition: .3s; }
+.social-btn:hover { background: var(--primary); border-color: var(--primary); color: #fff; transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.contact-cta { text-align: center; margin-top: 2.4rem; }
+```
+
+Footer:
+```css
+.site-footer { background: var(--dark); color: #d9c3b3; padding: 64px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1.2fr; gap: 2.5rem; padding-bottom: 2.6rem; }
+.site-footer h4 { color: #fff; font-size: 1.25rem; font-weight: 800; margin-bottom: .9rem; }
+.site-footer p { font-size: .95rem; }
+.footer-links { display: grid; gap: .5rem; }
+.footer-links a { color: #d9c3b3; transition: .3s; font-size: .95rem; }
+.footer-links a:hover { color: var(--accent); transform: translateX(-4px); }
+.footer-contact li { display: flex; gap: .6rem; align-items: center; margin-bottom: .5rem; font-size: .95rem; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.1); text-align: center; padding: 1.3rem 0; font-size: .9rem; color: #b39a88; }
+```
+
+Back to top:
+```css
+.back-to-top { position: fixed; bottom: 1.4rem; inset-inline-end: 1.4rem; width: 48px; height: 48px; border-radius: 50%; border: none; background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; font-size: 1.3rem; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); opacity: 0; visibility: hidden; transform: translateY(15px); transition: .35s; z-index: 900; }
+.back-to-top.show { opacity: 1; visibility: visible; transform: none; }
+.back-to-top:hover { transform: translateY(-5px); }
+```
+
+Reveal:
+```css
+.reveal { opacity: 0; transform: translateY(34px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+```
+
+Responsive:
+```css
+@media (max-width: 960px) {
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero-text { margin-inline: auto; }
+  .hero-actions, .hero-rating { justify-content: center; }
+  .hero-visual { margin-top: 2rem; }
+  .hero-card-1 { inset-inline-start: 0; } .hero-card-2 { inset-inline-end: 0; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+@media (max-width: 820px) {
+  .nav-toggle { display: flex; }
+  .nav-menu { position: fixed; top: 72px; inset-inline: 0; background: #fff; flex-direction: column; align-items: stretch; gap: 0; padding: 1rem 4%; box-shadow: var(--shadow-md); border-radius: 0 0 22px 22px; transform: translateY(-130%); transition: transform .4s ease; z-index: 999; max-height: 80vh; overflow-y: auto; }
+  .nav-menu.open { transform: translateY(0); }
+  .nav-link { display: block; padding: 1rem 1.2rem; border-radius: 12px; font-size: 1.05rem; }
+  .nav-cta span { display: none; }  /* icon only */
+  .nav-cta { padding: .55rem; }
+}
+```
+
+Wait, nav-menu as ul with flex column — ok.
+
+@media (max-width: 560px): section padding smaller, hero padding-top more.
+
+Also `.nav-order-btn` — I gave it class "btn btn-whatsapp btn-sm nav-order-btn" in draft; I'll use nav-cta naming.
+
+Now JS file.
+
+```js
+/* ============================================================
+   مطعم الشعلة - script.js
+   تحكم القوائم، البحث، الفلاتر، الظهور، واتساب
+   ============================================================ */
+
+// ===== عناصر الواجهة =====
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+const siteHeader = document.getElementById('siteHeader');
+const backToTop = document.getElementById('backToTop');
+const searchInput = document.getElementById('menuSearch');
+const categoryBtns = document.querySelectorAll('.category-btn');
+const menuCards = document.querySelectorAll('.menu-card');
+const emptyState = document.getElementById('emptyState');
+const yearEl = document.getElementById('year');
+
+// ===== فتح/إغلاق القائمة (الموبايل) =====
+function closeNav() { ... }
+navToggle.addEventListener('click', () => { navToggle.classList.toggle('open'); ... });
+navMenu links click → closeNav.
+
+// ===== تأثير الظهور عند التمرير (Scroll Reveal) =====
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ===== ترويسة ثابتة + ظهور زر العودة للأعلى =====
+const handleScroll = () => {
+  siteHeader.classList.toggle('scrolled', window.scrollY > 20);
+  if (backToTop) backToTop.classList.toggle('show', window.scrollY > 400);
+};
+window.addEventListener('scroll', handleScroll, { passive: true });
+handleScroll();
+
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ===== تحديد التصنيف الفعلي =====
+categoryBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    categoryBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.category;
+    menuCards.forEach(card => {
+      const show = cat === 'all' || card.dataset.category === cat;
+      card.style.display = show ? '' : 'none';
+    });
+  });
+});
+
+// ===== البحث داخل المنيو =====
+let searchTimer;
+searchInput.addEventListener('input', (e) => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => performSearch(e.target.value.trim()), 200);
+});
+function performSearch(query) {
+  const q = query.toLowerCase();
+  let visibleCount = 0;
+  menuCards.forEach(card => {
+    const name = (card.dataset.name || '').toLowerCase();
+    const desc = (card.dataset.desc || '').toLowerCase();
+    const match = !q || name.includes(q) || desc.includes(q);
+    card.style.display = match ? '' : 'none';
+    if (match) visibleCount++;
+  });
+  emptyState.classList.toggle('visible', visibleCount === 0);
+}
+
+// ===== زر واتساب =====
+document.querySelectorAll('.btn-wa').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const message = btn.dataset.name
+      ? `السلام عليكم، أود طلب:\nاسم المنتج: ${btn.dataset.name}\nالسعر: ${btn.dataset.price} ر.س`
+      : `السلام عليكم، أود طلب:\n${btn.dataset.offer}`;
+    window.open(`https://wa.me/967509730421?text=${encodeURIComponent(message)}`, '_blank');
+  });
+});
+
+// ===== سنة التحديث في الفوتر =====
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+```
+
+Wait: hero "اطلب الآن" should open wa.me with default message; as <a href> it does that already with prefilled text. I'll give hero button `href="https://wa.me/967509730421?text=..."` — but requirement: رسالة تلقائية مثل... For general request, message: "السلام عليكم، أود طلب من مطعم الشعلة" — I'll set href accordingly.
+
+For nav CTA: plain href="https://wa.me/967509730421".
+
+For offer buttons: class "btn btn-wa btn-primary" with data-offer="..." — JS intercepts.
+
+For menu buttons: class "btn btn-whatsapp btn-sm btn-wa" with data-name, data-price.
+
+Note: buttons with class btn-wa that are <button> elements: e.preventDefault works.
+
+Now writing all files for real. Also need `assets/icons/` files.
+
+One more: smooth scroll between sections — CSS scroll-behavior + scroll-padding-top handles it; add `scroll-margin-top` maybe not needed.
+
+Also nav scroll spy: skip fancy; on click set active. Also add scroll-based active? Keep click-based + initial. Fine, but nice: on scroll, highlight. I'll implement simple scroll spy with getBoundingClientRect on sections. Keep code clean — maybe skip to avoid complexity? It's nice-to-have; requirement says "تنقل سلس بين الأقسام" which CSS handles. Skip scroll spy, but I'll add click-based active toggling.
+
+Let me write files now.
+
+Order: write assets SVGs (parallel writes), then style.css, script.js, index.html.
+
+Let me compose index.html fully with care for RTL and completeness.
+
+Full index.html draft:
+
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مطعم الشعلة | أطيب الأطباق الشرقية - أكل شهي بلمسة عربية</title>
+  <meta name="description" content="مطعم الشعلة: مكونات طازجة، مشاوي شواية، وأطباق شرقية أصيلة. اطلب الأطباق عبر واتساب بضغطة واحدة وتوصيل سريع لجميع المدن.">
+  <meta name="keywords" content="مطعم الشعلة, مطعم برغر, بيتزا, مشاوي, وجبات شرقية, أكل شهي">
+  <meta name="author" content="مطعم الشعلة">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#e8590c">
+
+  <meta property="og:title" content="مطعم الشعلة | أطيب الأطباق الشرقية">
+  <meta property="og:description" content="مكونات طازجة، توصيل سريع، جودة عالية. اطلب الآن عبر واتساب.">
+  <meta property="og:type" content="restaurant.restaurant">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== الشريط العلوي الثابت ===== -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar container">
+      <a href="#home" class="logo" aria-label="مطعم الشعلة - الصفحة الرئيسية">
+        <span class="logo-icon" aria-hidden="true">🔥</span>
+        <span class="logo-text">مطعم <span class="logo-accent">الشعلة</span></span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">الرئيسية</a></li>
+        <li><a href="#menu" class="nav-link">المنيو</a></li>
+        <li><a href="#offers" class="nav-link">العروض</a></li>
+        <li><a href="#about" class="nav-link">لماذا نحن</a></li>
+        <li><a href="#reviews" class="nav-link">آراء العملاء</a></li>
+        <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+      </ul>
+
+      <a href="https://wa.me/967509730421" target="_blank" rel="noopener" class="btn btn-whatsapp nav-cta">
+        <img src="assets/icons/whatsapp.svg" alt="" width="20" height="20" aria-hidden="true">
+        <span class="nav-cta-text">اطلب الآن</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+```
+
+Hero, menu, offers, about, reviews, contact, footer, back-to-top, scripts.
+
+Let me finalize menu cards (12). Data attributes: data-category, data-name, data-price, data-desc.
+
+I'll write cards:
+
+```html
+<article class="menu-card reveal" data-category="burger" data-name="برجر التحطيم" data-price="25" data-desc="لحم مشوي طازج مع صلصة الجبن الحارة والبصل المكرمل">
+  <div class="card-image">
+    <span class="card-emoji" aria-hidden="true">🍔</span>
+    <span class="card-category">برغر</span>
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">برجر التحطيم</h3>
+    <p class="card-desc">لحم مشوي طازج مع صلصة الجبن الحارة والبصل المكرمل</p>
+    <div class="card-footer">
+      <span class="card-price">25<small> ر.س</small></span>
+      <button class="btn btn-whatsapp btn-sm btn-wa" data-name="برجر التحطيم" data-price="25">اطلب عبر واتساب</button>
+    </div>
+  </div>
+</article>
+```
+
+etc. For price display I'll just put "25" and CSS small element. Actually put `25` and `<small>ر.س</small>` inside span.
+
+Categories buttons:
+- all: "✨ الكل"
+- burger: "🍔 البرغر"
+- pizza: "🍕 البيتزا"
+- main: "🍗 الوجبات"
+- drinks: "🥤 المشروبات"
+- appetizer: "🍟 المقبلات"
+- dessert: "🍰 الحلويات"
+
+Offers (3):
+1. 🍕 "خصم البيتزا" — "خصم 20% على جميع أنواع البيتزا 🍕" — سعر العرض: 28 ر.س بدلاً من 35. CTA: "اطلب الخصم عبر واتساب" with data-offer="خصم البيتزا: خصم 20% على جميع أنواع البيتزا".
+2. 🍗 "وجبة العائلة" — "وجبة شاورما + برجر + مشروب بسعر 180 ر.س بدلاً من 260 ر.س". data-offer="وجبة العائلة: شاورمة + برجر + مشروب".
+3. 🥤 "خصم المشروبات" — "خصم 15% على جميع المشروبات والعصائر". data-offer.
+
+About: 4 cards with emoji icons.
+
+Reviews: 3 cards.
+
+Contact: 3 info cards + socials + CTA.
+
+Footer.
+
+Back-to-top.
+
+Scripts at end of body.
+
+Now write everything.
+
+For the hero greeting maybe: "مرحباً بك! 😋 أكل شهي بلمسة عربية".
+
+OK writing now. I'll write style.css first (big), then script.js, then index.html, then assets.
+
+Let me make sure CSS handles `.section-title` underline centered: `display: block; text-align: center;` since h2 inside centered header. I'll set .section-header { text-align:center } and .section-title { display:inline-block; } with ::after centered via inset-inline:0? For inline-block, use position relative + absolute inset-inline:0 which works with left/right 0? For inline-block with position:relative, absolute child with inset-inline:0 → left:0;right:0 → stretches. OK.
+
+Now writing files.
+
+One concern: `inset-inline-start/end` support — modern browsers fine.
+
+Let me write style.css content completely now.
+
+Also responsive tweaks and print? no.
+
+Font weights: Cairo 900 for headings.
+
+Let me write.
+
+After writing, I should verify by opening in browser? Could use browser tools to preview. That might be good for verification: open file:// path. The browser tools are available. I could open the file to check rendering. Let's do that after writing — good QA step.
+
+Let me write files now.
+
+For the write tool calls, path: C:\Users\ssbba\Desktop\مطعم\index.html etc.
+
+Let me carefully write style.css:</think>المجلد فارغ وجاهز. سأنشئ الآن ملفات الموقع. أولاً ملفات الأيقونات في `assets/`:<tool_call>write<arg_key>content</arg_key><arg_value><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="0.85em" font-size="88">🔥</text></svg>
